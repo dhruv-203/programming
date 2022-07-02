@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transition and Animation</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        html,
+        body {
+            height: 100%;
+            width: 100%;
+        }
+
+        .slider {
+            width: 0vw;
+            height: 0.5vh;
+            background-color: red;
+            position: relative;
+            top: 0;
+            /* transition: width 2.5s ease-in-out ;  */
+            left: 0;
+            animation: slider 2.5s cubic-bezier(1, 0.03, 0.38, 1.1) infinite normal;
+        }
+        @keyframes slider{
+            from{
+                width:0vw;
+                opacity:0.8;
+            }
+            to{
+                width:100vw;
+                opacity:1;
+            }
+        }
+        /* .rotate:hover~.slider{ /*it is only working because slider class is after rotate*/
+        /*    width:100vw
+        }  */
+        .rotate {
+
+            width: 25vw;
+            position: absolute;
+            top: 15vh;
+            left: 70vw;
+            height: 25vh;
+            /* transition: transform 2s ease-in-out 0s; */
+            animation: rotate 1s ease-in-out infinite alternate;
+        }
+
+        @keyframes rotate {
+            from {
+                transform: none;
+            }
+
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        /* .rotate:hover{
+            transform: rotate(360deg);
+        } */
+        .slide {
+            /* position: absolute; */
+            /* left: 0; */
+            height: 30vh;
+            width: 30vw;
+            float: left;
+        }
+
+        @keyframes slideo {
+            0%{
+                left:0%;
+            }
+            10%{
+                left:0;
+            }
+            20%{
+                left:-100%;
+            }
+            30%{
+                left:-100%;
+            }
+            40%{
+                left:-200%;
+            }
+            50%{
+                left:-200%;
+            }
+            60%{
+                left:-100%;
+            }
+            70%{
+                left:-100%;
+            }
+            80%{
+                left: 0;
+            }
+            90%{
+                left:0;
+            }
+            100%{
+                left:0;
+            }
+        }
+
+        .box {
+            background-color: aqua;
+            width: 30vw;
+            height: 30vh;
+            margin-top: 15%;
+            margin-left: 10%;
+            overflow: hidden;
+        }
+
+        .box>.image-slider {
+            position: relative;
+            width: 90vw;
+            height: 30vh;
+            display: flex;
+            animation: slideo 25s ease-in-out infinite alternate-reverse;
+        }
+
+        .img-cont {
+            width: 30vw;
+            height: 30vh;
+            position: relative;
+            
+        }
+    </style>
+</head>
+
+<body>
+    <div class="rotate"><img src="A14.png" width="100%" height="100%" alt=""></div>
+    <div class="slider"></div>
+    <div class="box">
+        <div class="image-slider">
+            <div class="img-cont">
+                <img src="Apple-M1-chip.jpg" alt="" class="slide" id="a">
+            </div>
+            <div class="img-cont">
+                <img src="Apple-M1-Ultra-hero.jpg" alt="" class="slide" id="b">
+            </div>
+            <div class="img-cont">
+                <img src="Apple-M1-Ultra-chipset-220308.jpg" alt="" class="slide" id="c">
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
