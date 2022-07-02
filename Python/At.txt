@@ -1,6 +1,0 @@
-sno       Name             Enrollment No.
-1        Dhruv Patel       202103103510445   
-2        Ayush kumar       202103103510235
-3        Balkrishna Mehta  202103103510343
-4        Neel Patel        202103103510444
-5        Jeel Patel        202103103510243
