@@ -151,7 +151,7 @@ form{
 }
 .text{
     letter-spacing: 0.1px;
-    font-weight: 550;
+    font-weight: 500;
     font-size: 16px;
     font-family: Roboto,Arial,sans-serif;
 }
@@ -179,6 +179,7 @@ form{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin:0px 10%;
 }
 .sub-nav-item .fa-solid{
     opacity:0.5
@@ -186,13 +187,83 @@ form{
 .sub-nav-item{
     /* background-color: #ffe500; */
     height: 80%;
-    font-size: 16px;
+    font-size: 14px;
     color:black;
-    font-size: 16px;
+    /* font-size: 16px; */
+    align-self: end;
     letter-spacing: 0.1px;
-    font-weight: 550;
+    font-weight:500;
     cursor:pointer;
     line-height: 20px;
     font-family: Roboto,Arial,sans-serif;
 
+}
+.container{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+}
+.left-control-panel{
+    background-color: #fff;
+    width:17vw;
+    height: 88vh;
+    margin:10px;
+}
+.right-product-grid{
+    background-color: #fff;
+    width:80vw;
+    height: 100vh;
+    margin: 10px;
+    /* margin-left:-1px; */
+}
+.left-head{
+    width: 100%;
+    height: 8.5vh;
+    /* background-color: #ffe500; */
+    /* text-align: center; */
+}
+.left-head>hr{
+    opacity: 0.2;
+    margin:0;
+    position: relative;
+    top:30px;
+    /* font-weight: 500; */
+}
+.left-head>span{
+    width: 100%;
+    position: relative;
+    top:15px;
+    left:15px;
+    /* margin:50px 10px; */
+    height: 100%;
+    font-size: 18px;
+    letter-spacing: 0.3px;
+    font-weight: 500;
+    font-family: Roboto,Arial,sans-serif;
+}
+.category-list{
+    margin:0 0 0 15px
+}
+.categories{
+    margin-block-start: 5px;
+    list-style-type: none;
+    /* margin-inline-start: 0px; */
+    padding-inline-start: 20px;
+    letter-spacing: 0.1px;
+    font-weight: 500;
+    font-size: 16px;
+    font-family: Roboto,Arial,sans-serif;
+}
+li{
+    padding: 5px;
+}
+.switcher{
+    text-decoration: none;
+    padding: 5px;
+}
+.category-head{
+    font-size: 12px;
+    /* letter-spacing: 0.3px; */
+    font-weight: 500;
+    font-family: Roboto,Arial,sans-serif;
 }
