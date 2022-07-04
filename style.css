@@ -168,3 +168,31 @@ form{
     line-height: 20px;
     font-family: Roboto,Arial,sans-serif;
 }
+.sub-nav{
+    height: 5vh;
+    background-color: #fff;
+    width: 100vw;
+}
+.in-sub-nav{
+    height: 100%;
+    width:80%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.sub-nav-item .fa-solid{
+    opacity:0.5
+}
+.sub-nav-item{
+    /* background-color: #ffe500; */
+    height: 80%;
+    font-size: 16px;
+    color:black;
+    font-size: 16px;
+    letter-spacing: 0.1px;
+    font-weight: 550;
+    cursor:pointer;
+    line-height: 20px;
+    font-family: Roboto,Arial,sans-serif;
+
+}
