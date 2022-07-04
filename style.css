@@ -4,13 +4,20 @@ html,body{
 }
 .navbar{
     display:flex ;
-    justify-content:space-around;
     height: 6vh;
-    align-items: center;
     background-color:#2874f0;
 
 }
-
+.main{
+    width:80%;
+    display: flex;
+    justify-content:space-around;
+    align-items: center;
+}
+.spare{
+    min-width: 154px;
+    height: 100%;
+}
 .brand-logo{
     width:100px;
     height: 25px;
@@ -34,10 +41,10 @@ html,body{
     display:flex;
     flex-direction: column;
     height: 20px;
-    /* justify-content: center; */
+    justify-content: center;
     align-items: center;
     width:100px;
-    padding: 0 0 20px 0;
+    /* padding: 0 0 20px 0; */
     
 }
 .brand-logo-tag{
@@ -55,27 +62,65 @@ html,body{
 .search{
     display: flex;
     height:100%;
-    background-color: black;
+    background-color:white;
     width:100%;
     margin: 0px 0;
 }
 .search-bar>input{
     width: 100%;
+    margin: 0;
+    padding: 0;
+    border: none;
     height: 100%;
 }
 .search-bar{
     height:100%;
-    /* background-color: black; */
+    
     width:100%;
     margin: 0px 0;
 }
 form{
     height: 75%;
-    width:30%;
+    width:40%;
 }
 .magnify{
     background: none;
     border: none;
     width:50px;
     height: 50px;
+
+}
+.magnify>svg{
+    position: relative;
+    bottom: 5px;
+}
+.login-button{
+    background-color: #ffe500;
+    width: 120px;
+    height: 30px;
+    border-radius: 2px;
+    background-color: #fff;
+}
+.login-button>button{
+    background: none;
+    width: 100%;
+    color:#2874f0;
+    height: 100%;
+    font-weight:550;
+    letter-spacing: 0.1px;
+    border:none;
+    cursor: pointer;
+    font-size: 16px;
+    /* border-radius: 50px; */
+    /* width:50px; */
+}
+.link1>a{
+    text-decoration: none;
+    color:white;
+    font-size: 16px;
+    letter-spacing: 0.1px;
+    font-weight: 550;
+    cursor:pointer;
+    line-height: 20px;
+    font-family: Roboto,Arial,sans-serif;
 }
