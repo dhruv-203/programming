@@ -209,16 +209,10 @@ form{
 .left-control-panel{
     background-color: #fff;
     width:17vw;
-    height: 88vh;
+    height: fit-content;
     margin:10px;
 }
-.right-product-grid{
-    background-color: #fff;
-    width:80vw;
-    height: 100vh;
-    margin: 10px;
-    /* margin-left:-1px; */
-}
+
 .left-head{
     width: 100%;
     height: 8.5vh;
@@ -269,4 +263,64 @@ li{
     /* letter-spacing: 0.3px; */
     font-weight: 500;
     font-family: Roboto,Arial,sans-serif;
+}
+.right-product-grid{
+    background-color: #fff;
+    width:80vw;
+    height: 700vh;
+    margin: 10px;
+}
+.products{
+    height: 75%;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    grid-template-rows: auto auto auto auto auto auto auto auto auto auto;
+}
+.product-card{
+    background-color: #ffe500;
+    margin:1px;
+}
+.right-head{
+    display: flex;
+    flex-direction: column;
+}
+.right-in-head,.nav-title{
+    font-family: Roboto,Arial,sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    margin: 8px;
+}
+.right-head-nav{
+    width:50%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.nav-title{
+    font-size: 14px;
+}
+.right-nav-link{
+    text-decoration: none;
+    color:black;
+    font-family: Roboto,Arial,sans-serif;
+    /* font-weight: 100; */
+    font-size: 14px;
+}
+#first{
+    color:#2874f0;
+    font-family: Roboto,Arial,sans-serif;
+    cursor: default;
+    font-weight: 550;
+    border-bottom: 2px solid #2874f0;
+    /* line-height: 1.6; */
+}
+.right-navs{
+    height: 100%;
+    /* width:25%; */
+}
+.right-nav-link{
+    height: 100%;
+    /* width: 100%; */
+    padding: 6px;
 }
