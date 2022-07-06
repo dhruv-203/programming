@@ -30,5 +30,13 @@ public class fourth {
         // statically defining array
         String[] names={"dhruv","ayush","bk"};
         System.out.println(names[1]);
+
+        // 2-d array
+        int[][] final_marks = {{45,65,78,98},{45,54,78,98},{12,32,65,12}}; // a 3X4 array 3rows and 4 columns
+        System.out.println(final_marks[0][3]);
+        System.out.println(final_marks[1][3]);
+        System.out.println(final_marks[2][3]);
+        System.out.println(final_marks[1][0]);
+
     }
 }
