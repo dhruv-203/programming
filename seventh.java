@@ -1,4 +1,4 @@
-// math library functions
+// math library functions 
 public class seventh {
     public static void main(String[] args){
         int a,b;
