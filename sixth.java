@@ -4,11 +4,11 @@ public class sixth {
         //arithmetic operators
         int a,b;
         a=5;b=78;
-        // System.out.println(a+b);//addition
-        // System.out.println(b-a);//subtraction
-        // System.out.println(b/a);//division
-        // System.out.println(b*a);//multiplication
-        // System.out.println(b%a); // modulo
+        System.out.println(a+b);//addition
+        System.out.println(b-a);//subtraction
+        System.out.println(b/a);//division
+        System.out.println(b*a);//multiplication
+        System.out.println(b%a); // modulo
 
         //= assignment operator
 

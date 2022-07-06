@@ -1,3 +1,4 @@
+// casting and constants
 public class fifth {
     public static void main(String[] args){
         int price=100;
@@ -13,6 +14,6 @@ public class fifth {
         // defining constants in java by using final keyword
         final float PI=3.14F;
         // PI=54; // this will return error
-        
+
     }
 }
