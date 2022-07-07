@@ -20,7 +20,8 @@ $y=(int)$y;
 var_dump($y);
 $y= "123456789";
 $y=(float)$y;
-var_dump($y)
-
+var_dump($y);
+$y=(string)$y;
+var_dump($y);
 
 ?>
