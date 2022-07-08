@@ -10,10 +10,16 @@ public class eight {
         System.out.print("Enter a Statement: ");
         String text = ask.next(); // it will only take the first word from the String as it takes values in tokens
         System.out.println(text);
-        
-        System.out.println("Enter a Statement: ");
-        String text1 = ask.nextLine();
-        System.out.println(text1);
-
+        /*
+         giving error
+         System.out.println("Enter a Statement: ");
+         String text1 = ask.nextLine();
+         System.out.println(text1);
+         */
+        //this is solved by using new scanner obj
+        Scanner str = new Scanner(System.in);
+        System.out.println("Enter a Statement: "); // dont know why 
+         String text1 = str.nextLine();
+         System.out.println(text1);
     }
 }
