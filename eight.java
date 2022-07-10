@@ -6,6 +6,9 @@ public class eight {
         System.out.print("Enter an Integer: ");
         int inp= ask.nextInt(); // taking integer inputs
         System.out.println(inp);
+        System.out.print("Enter an Integer: "); // do baar int isiliye lia kyuki do baar nextline main glitch tha if used with same scanner object so int pai bhi try kia
+        int pin=ask.nextInt();
+        System.out.println(pin);
 
         System.out.print("Enter a Statement: ");
         String text = ask.next(); // it will only take the first word from the String as it takes values in tokens
