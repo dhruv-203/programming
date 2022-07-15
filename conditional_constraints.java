@@ -10,7 +10,7 @@ import java.util.Scanner;
         //&& -- logical and operator
         //|| -- logical OR operator
         // \! -- logical NOT (ignore backlash)
-public class conditional_constraints {
+public class conditional_constraints{
     static int percent ;
     public static void main(String[] args) {
         // a simple grading system based on the percentage of the user
