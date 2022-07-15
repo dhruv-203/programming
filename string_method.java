@@ -24,6 +24,18 @@ public class string_method {
         //substring() used for string slicing
         String test="0123456789";        
         System.out.println(test.substring(5,9)); // prints 5-8 excludes 9
+        
         // we can re-write the string but we can't update a character on particular index of string 
+
+        // toUpperCase() and toLowerCase()  (names can be remembered by using camel case like myNameIsDhruvPatel)
+        System.out.println(One.toUpperCase());
+        System.out.println(One.toLowerCase());
+
+        // trim() method removes leading and trailing spaces in string
+        Text="    my name is dhruv    ";
+        System.out.println(Text);
+        System.out.println(Text.trim());
+
+        
     }
 }
