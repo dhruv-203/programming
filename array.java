@@ -1,4 +1,14 @@
 // Arrays and array methods
+
+/*
+ * array can be defined in following ways:
+ * int[] marks;
+ * marks=new int[5];
+ * 
+ * int[] marks = new int[5];
+ * 
+ * int[] marks = {78,87,98};
+ */
 import java.util.Arrays;
 public class array {
     public static void main(String[] args){
@@ -37,6 +47,21 @@ public class array {
         System.out.println(final_marks[1][3]);
         System.out.println(final_marks[2][3]);
         System.out.println(final_marks[1][0]);
+
+        System.out.println("\n\n for-each loop:");
+        for(int[] item:final_marks){
+            System.out.print("The Elements: ");
+            for(int item1:item){
+                System.out.print(item1+" ");
+            }
+            System.out.println(" ");
+        }
+        // syntax :
+        /*
+         * for(data-type name : array-name){
+         *    body
+         * }
+         */
 
     }
 }
