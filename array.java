@@ -56,6 +56,7 @@ public class array {
             }
             System.out.println(" ");
         }
+        
         // syntax :
         /*
          * for(data-type name : array-name){
