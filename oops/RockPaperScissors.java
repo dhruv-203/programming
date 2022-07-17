@@ -86,7 +86,6 @@ public class RockPaperScissors {
        int round = 1;
        int teamComputer=0;
        int teamUSER=0;
-       boolean result ;
        while(round<4){
            round++;
            game.setComputerChoice();
