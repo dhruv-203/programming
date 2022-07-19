@@ -32,5 +32,6 @@ public class inheritance {
         ChildOfDerived obj = new ChildOfDerived(); // on calling this this it will call the constructor of the base --> derived --> childofderived constructor
         System.out.println("\n\n\n --------\n\n");
         ChildOfDerived obj1 = new ChildOfDerived(2,3,4);
+        base obj3 = new derived(45, 55); // reference from dynamic method dispatch this proves that method is defined on runtime as new derived makes obj which is of type base but obj for derived class 
     }
 }
