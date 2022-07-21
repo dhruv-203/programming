@@ -5,7 +5,13 @@ print_r($pudding);
 print_r($icecream);
 $dessert=$pudding+$icecream;
 print($dessert);
-// == same elements; === same element at same place 
-
+// == same elements; === same element in the same order
+if($pudding!==$icecream){
+  echo "same\n";
+  
+  }
+else{
+  echo "Difference\n"
+}
 
 ?>
