@@ -14,4 +14,20 @@ else{
   echo "Difference\n";
 }
 
+/*
+$pudding=array('raspberry'=>333,'peach'=>222);
+$icecream=array('peach'=>222,'raspberry'=>333);
+print_r($pudding);
+print_r($icecream);
+$dessert=$pudding+$icecream;
+print($dessert);
+// == same elements; === same element in the same order
+if($pudding!==$icecream){
+  echo "different\n"; 
+  }
+else{
+  echo "same\n";
+}
+*/
+
 ?>
