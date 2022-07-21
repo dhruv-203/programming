@@ -11,7 +11,7 @@ if($pudding!==$icecream){
   
   }
 else{
-  echo "Difference\n"
+  echo "Difference\n";
 }
 
 ?>
