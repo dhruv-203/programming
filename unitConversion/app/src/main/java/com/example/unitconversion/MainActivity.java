@@ -20,12 +20,12 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-    text= findViewById(R.id.field);
-    show = findViewById(R.id.output);
-    button=findViewById(R.id.submit);
-    km = findViewById(R.id.km);
-    cm=findViewById(R.id.cm);
-    dm=findViewById(R.id.dm);
+        text= findViewById(R.id.field);
+        show = findViewById(R.id.output);
+        button=findViewById(R.id.submit);
+        km = findViewById(R.id.km);
+        cm=findViewById(R.id.cm);
+        dm=findViewById(R.id.dm);
 //    button.setOnClickListener(new View.OnClickListener() {
 //        @Override
 //        public void onClick(View view) {
@@ -33,40 +33,40 @@ public class MainActivity extends AppCompatActivity {
 //        }
 //    });
         final String[] choice = new String[1];
-    km.setOnClickListener(new View.OnClickListener() {
-        @Override
-        public void onClick(View view) {
-            choice[0] ="km";
-        }
-    });
-    dm.setOnClickListener(new View.OnClickListener() {
-        @Override
-        public void onClick(View view) {
-            choice[0] ="dm";
-        }
-    });
-    cm.setOnClickListener(new View.OnClickListener(){
-        @Override
-        public void onClick(View view){
-            choice[0]="cm";
-        }
-    });
+        km.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                choice[0] ="km";
+            }
+        });
+        dm.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                choice[0] ="dm";
+            }
+        });
+        cm.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View view){
+                choice[0]="cm";
+            }
+        });
 
-    button.setOnClickListener(new View.OnClickListener() {
-        @Override
-        public void onClick(View view) {
-            String num = text.getText().toString();
-            int a = Integer.parseInt(num);
-            if(choice[0]=="cm"){
-                show.setText("The Value in Centimeters: "+(a*100)+" cm");
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                String num = text.getText().toString();
+                int a = Integer.parseInt(num);
+                if(choice[0]=="cm"){
+                    show.setText("The Value in Centimeters: "+(a*100)+" cm");
+                }
+                if(choice[0]=="km"){
+                    show.setText("The Value in Kilometers: "+(a/1000.0)+" km");
+                }
+                if(choice[0]=="dm"){
+                    show.setText("The Value in Decimeters: "+(a*10)+" dm");
+                }
             }
-            if(choice[0]=="km"){
-                show.setText("The Value in Kilometers: "+(a/1000.0)+" km");
-            }
-            if(choice[0]=="dm"){
-                show.setText("The Value in Decimeters: "+(a*10)+" dm");
-            }
-        }
-    });
+        });
     }
 }
