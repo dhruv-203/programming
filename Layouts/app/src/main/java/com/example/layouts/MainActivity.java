@@ -33,7 +33,27 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(Constraint);
             }
         });
-
+        linear.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent Linear = new Intent(MainActivity.this,MainActivity3.class);
+                startActivity(Linear);
+            }
+        });
+        scroll.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent Scroll = new Intent(MainActivity.this,MainActivity4.class);
+                startActivity(Scroll);
+            }
+        });
+        table.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent Table = new Intent(MainActivity.this,MainActivity5.class);
+                startActivity(Table);
+            }
+        });
 
     }
 }

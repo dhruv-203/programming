@@ -30,46 +30,33 @@ public class MainActivity2 extends AppCompatActivity {
 //            Toast.makeText(MainActivity.this, text.getText(), Toast.LENGTH_LONG).show();
 //        }
 //    });
-        final String[] choice = new String[1];
-        km.setOnClickListener(new View.OnClickListener() {
+       km.setOnClickListener(new View.OnClickListener() {
+           @Override
+           public void onClick(View view) {
+               int tmp ;
+               tmp= Integer.parseInt(text.getText().toString());
+               tmp/=1000;
+               show.setText("The Value in Kilometers: "+tmp);
+           }
+       });
+        cm.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                choice[0] = "km";
+                int tmp ;
+                tmp= Integer.parseInt(text.getText().toString());
+                tmp*=100;
+                show.setText("The Value in Centimeters: "+tmp);
             }
         });
         dm.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                choice[0] = "dm";
-            }
-        });
-        cm.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                choice[0] = "cm";
-            }
-        });
-
-        button.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                String num = text.getText().toString();
-                int a = Integer.parseInt(num);
-                if (choice[0] == "cm") {
-                    show.setText("The Value in Centimeters: " + (a * 100) + " cm");
-                }
-                if (choice[0] == "km") {
-                    show.setText("The Value in Kilometers: " + (a / 1000.0) + " km");
-                }
-                if (choice[0] == "dm") {
-                    show.setText("The Value in Decimeters: " + (a * 10) + " dm");
-                }
+                int tmp ;
+                tmp= Integer.parseInt(text.getText().toString());
+                tmp*=10;
+                show.setText("The Value in Decimeters: "+tmp);
             }
         });
     }
-    public void callMainActivity(View view){
-        Intent i = new Intent(getApplicationContext(), MainActivity.class);
-        startActivity(i);
     }
 
-}

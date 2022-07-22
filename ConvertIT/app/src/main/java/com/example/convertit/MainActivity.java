@@ -9,19 +9,26 @@ import android.view.View;
 import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity {
-    Button length=findViewById(R.id.length);
-    Button area=findViewById(R.id.area);
-    Button volume=findViewById(R.id.volume);
-    Button weight=findViewById(R.id.weight);
+    Button length;
+    Button area;
+    Button volume;
+    Button weight;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        length=findViewById(R.id.length);
+        area = findViewById(R.id.area);
+        volume=findViewById(R.id.volume);
+        weight=findViewById(R.id.weight);
+        length.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent show = new Intent(MainActivity.this, MainActivity2.class);
+                startActivity(show);
+            }
+        });
+    }
 
     }
-    public void callMainActivity2(View view){
-        Intent openL = new Intent(getApplicationContext(),MainActivity2.class);
-        startActivity(openL);
-    }
-}

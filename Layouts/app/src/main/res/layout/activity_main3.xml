@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:gravity="center"
     tools:context=".MainActivity3">
 
     <TextView
@@ -12,6 +13,7 @@
         android:layout_height="wrap_content"
         android:text="Linear layout"
         android:textSize="50dp"
+        android:layout_marginBottom="25dp"
         android:textStyle="bold"
 
         />
@@ -20,6 +22,7 @@
         android:id="@+id/button1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="15dp"
         android:text="button"
 
         app:layout_constraintVertical_bias="0.114" />
@@ -29,10 +32,13 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="button"
+        android:layout_marginBottom="15dp"
         app:layout_constraintVertical_bias="0.039" />
 
     <Button
         android:id="@+id/button3"
+        android:layout_marginBottom="15dp"
+
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="button"
@@ -44,21 +50,22 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="button"
-
+        android:layout_marginBottom="15dp"
         app:layout_constraintVertical_bias="0.039" />
 
     <Button
         android:id="@+id/button5"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="15dp"
         android:text="button"
-
-        app:layout_constraintVertical_bias="0.039" />
+        />
 
     <LinearLayout
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:gravity="bottom"
+        android:gravity="center"
+        android:layout_marginBottom="150dp"
         android:orientation="horizontal"
         app:layout_constraintVertical_bias="0.049">
 
