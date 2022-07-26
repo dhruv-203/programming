@@ -18,5 +18,6 @@ public class progr7 {
                 }
                 System.out.printf("%c%c%c%d%d%d%d",number[0],number[1],number[2],number[3],number[4],number[5],number[6]);
         }
-        
+        // if we wish to use random class then we can do similar to random*(max-min+1)+min
+        // say generate is a object of random class then generate.nextInt(max-min+1)+min
 }
