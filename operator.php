@@ -51,6 +51,7 @@ echo "Greater than\t". var_dump($x>$y). "\n";
 echo "Less than\t". var_dump($x<$y). "\n";
 echo "Greater than or Equal\t". var_dump($x>=$y). "\n";
 echo "less than or Equal\t". var_dump($x<=$y). "\n";
+print("\n\n\n");
 
 $x=10;
 $y=5;
@@ -63,6 +64,7 @@ echo "spaceship for x<y: ". var_dump($x<=>$y). "\n";
 $x=5;
 $y=5;
 echo "spaceship for x=y: ". var_dump($x<=>$y). "\n";
+print("\n\n\n");
 
 $y=7;
 $x=5;
