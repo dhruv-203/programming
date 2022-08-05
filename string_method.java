@@ -34,6 +34,7 @@ public class string_method {
         // trim() method removes leading and trailing spaces in string
         Text="    my name is dhruv    ";
         System.out.println(Text);
+        
         System.out.println(Text.trim());
 
         
