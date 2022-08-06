@@ -42,6 +42,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 num= entry.getText().toString();
                 result= calcu(num);
+                outputbox.setText("");
                 for(String x:result){
                     outputbox.append(x);
                 }
