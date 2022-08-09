@@ -1,0 +1,38 @@
+.nav2{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    padding-top:0%;
+    padding-left:5%;
+    font-size: smaller;
+    color:aliceblue;
+    
+}
+.butto1,.butto{
+    color:unset;
+    /* padding-left: 9%; */
+}
+.butto1{
+    padding-right:9%;
+    /* padding-left: 10%; */
+}
+.butto{
+    padding-right:2%;
+}
+.nav2{
+    display: block;
+    padding-left: 50px;
+}
+.navbar{
+    
+    background-color: #212121;
+    width:100%;
+}
+.lo{
+    display: flow-root;
+}
+.logo{
+    margin: 5px;
+    width:10%;
+    height:10%;
+    
+
+}

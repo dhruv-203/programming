@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script>
+      function validateForm() {
+        let f = document.forms["form"]["fname"].value;
+        if (f == "") {
+          alert("Please enter First Name");
+          return false;
+        }
+        let l = document.forms["form"]["lname"].value;
+        if (l == "") {
+          alert("Please enter Last Name");
+          return false;
+        }
+        let en = document.forms["form"]["enllt"].value;
+        if (en == "") {
+          alert("Please enter Enrollment number");
+          return false;
+        }
+        let e = document.forms["form"]["email"].value;
+        if (e == "") {
+          alert("Please enter Email");
+          return false;
+        }
+        let p = document.forms["form"]["pass"].value;
+        if (p == "") {
+          alert("Enter valid password");
+          return false;
+        }
+        if (p.length<6) {
+            alert("Enter valid password");
+            return false;
+        }
+        let cp = document.forms["form"]["cpass"].value;
+        if (cp != p){
+            alert("Password dosen't match");
+            return false;
+        }
+        let b = document.forms["form"]["bdate"].value;
+        if (b == "") {
+          alert("Please enter Birthdate");
+          return false;
+        }
+        let g = document.forms["form"]["gen"].value;
+        if (g == "") {
+          alert("Select Gender");
+          return false;
+        }
+        let d = document.forms["form"]["dep"].value;
+        if (d == "0") {
+          alert("Select your department");
+          return false;
+        }
+        let bn = document.forms["form"]["bname"].value;
+        if (bn == "") {
+          alert("Please enter Book Name");
+          return false;
+        }
+        let ida = document.forms["form"]["idate"].value;
+        if (ida == "") {
+          alert("Please enter valid Issue date");
+          return false;
+        }
+        let rd = document.forms["form"]["rdate"].value;
+        if (rd == "") {
+          alert("Please enter valid Return date");
+          return false;
+        }
+        if(rd.length < ida.length){
+            alert("Enter valid Return date");
+            return false;
+        }
+      }
+      </script>
+  </head>
+    <body>
+        <fieldset>
+            <legend>Book Issue Form</legend>
+              <form name="form" method="post" onsubmit="validateForm()">
+                <table>
+                  <tr><td><label for="fname">
+                     First Name:
+                  </label></td>
+                  <td><input type="text" name="fname"><br><br></td></tr>
+                  <tr><td><label for="lname">
+                      Last Name: 
+                  </label></td>
+                  <td><input type="text" name="lname"><br><br></td></tr>
+                  <tr><td><label for="email">
+                    Email: 
+                </label></td>
+                <td><input type="email" name="email"><br><br></td></tr>
+                <tr><td><label for="enllt">
+                    Enrollment number: 
+                </label></td>
+                <td><input type="text" name="enllt"><br><br></td></tr>
+                <tr><td><label>
+                      Password:
+                  </label></td>
+                  <td><input type="password" name="pass"><br><br></td></tr>
+                  <tr><td><label for="bdate">
+                      BirthDate: 
+                  </label></td>
+                  <td><input type="date" name="bdate"><br><br></td></tr>
+                  <tr><td><label for="gen">
+                      Gender: 
+                  </label></td>
+                  <td><label><input type="radio" name="gen" value=Male/>Male</label><br>
+                  <label><input type="radio" name="gen" value=Female/>Female</label><br><br></td></tr>
+                  <tr><td><label for="dep">
+                    Department:
+                </label></td>
+                <td><select name="dep" id="d">
+                    <option value="0">Select Department</option>
+                    <option value="1">IT</option>
+                    <option value="2">CSE</option>
+                    <option value="3">Mechanics</option>
+                    <option value="4">EC</option>
+                    <option value="5">Aerospace</option>
+                </select><br><br></td></tr>
+                <tr><td><label for="bname">
+                    Book Name:
+                 </label></td>
+                 <td><input type="text" name="bname"><br><br></td></tr>
+                <tr><td><label for="idate">
+                    Issue Date: 
+                </label></td>
+                <td><input type="date" name="idate"><br><br></td></tr>
+                <tr><td><label for="rdate">
+                    Return Date: 
+                </label></td>
+                <td><input type="date" name="rdate"><br><br></td></tr>
+
+                <td style="text-align: center ;"></td><td><input type="submit"><input type="reset"></td>
+              </form>
+            </table>
+            </fieldset>
+    </body>
+</html>

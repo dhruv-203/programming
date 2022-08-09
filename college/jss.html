@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function dhruv()
+        {
+            h=document.createElement("h1");
+            h.innerText="hello world";
+            document.body.appendChild(h);
+
+            
+        }
+        function ighr()
+        {
+            i=document.createElement("img");
+            i.setAttribute("src", "logoWithoutslogan.png");
+            document.body.appendChild(i);
+
+            j=document.createTextNode("hi this is textnode");
+            document.body.appendChild(j);
+
+            k=document.createElement("a");
+            k.setAttribute("href", "https://www.google.com");
+            l=document.createTextNode("click me");
+            k.appendChild(l);
+            document.body.appendChild(k);
+            
+            i1=document.getElementById(o1);
+            i1.removeChild(i1.children[1]);
+        }
+        function oop()
+        {
+            k=document.getElementById("o1");
+            l=document.k.children[1];
+            n=document.createTextNode("dhruv");
+            k.replaceChild(n, l);
+
+        }
+      
+       
+    </script>
+</head>
+<body>
+    <h1>hi</h1>
+    <p onclick="dhruv()">hi we are perparing js</p>
+    <ul  id="o1">
+        <li >hi</li>
+        <li>io</li>
+        <li>jwgfd</li>
+    </ul>
+    <button onclick="ighr()">click me</button>
+    <button onclick="oop()">click me</button>
+    
+</body>
+</html>

@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>CENTRAL LIBRARY UNI</title>
+    <script>
+        function formvalidate()
+        {
+            
+           var firname= document.book.fname.value;
+           
+           var lasname= document.book.lname.value;
+
+           var bname=document.book.bname.value;
+           
+           var Bno=document.book.Bno.value;
+           
+           var enroll=document.book.enroll.value;
+           
+           var dept=document.book.Department.value;
+            
+           if(firname=="")
+           {
+                alert("Please Enter First Name");
+                return false;
+           }
+
+           if(lasname=="")
+           {
+               alert("Please Enter Last Name");
+               return false;
+           }
+
+           if(bname=="")
+           {
+               alert("Please Enter book name");
+               return false;
+           }
+
+           if(Bno=="")
+           {
+               alert("Please Enter valid Book Number");
+               return false;
+           }
+
+
+        }
+        
+    </script>
+</head>
+
+<body>
+	<fieldset>
+		<table>
+			<form method="get" name="book" onsubmit="return formvalidate()">
+				<legend>Student Information</legend>
+				<tr>
+					<td><label for="fname">First Name</label></td>
+					<td><input type="text" name="fname" size="40" placeholder="Enter your First name"></td>
+				</tr>
+
+				<tr>
+					<td>
+						<label for="lname">Last Name</label>
+					</td>
+					<td>
+						<input type="text" name="lname" size="40" placeholder="Enter your last name">
+					</td>
+				</tr>
+                <tr>
+					<td>
+						<label for="bname">Book Name</label>
+					</td>
+					<td>
+						<input type="text" name="bname" size="40" placeholder="Enter Book Name">
+					</td>
+				</tr>
+                <tr>
+					<td>
+						<label for="Bno">Book No</label>
+					</td>
+					<td>
+						<input type="text" name="Bno" size="40" placeholder="Enter Book No.">
+					</td>
+				</tr>
+                <tr>
+					<td>
+						<label for="idate">Issued Date</label>
+					</td>
+					<td>
+						<input type="date" name="idate" >
+					</td>
+				</tr>
+                <tr>
+					<td>
+						<label for="rdate">Returned Date</label>
+					</td>
+					<td>
+						<input type="date" name="rdate" >
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<label for="mail">E-mail Address</label>
+					</td>
+					<td>
+						<input type="email" name="mail" size=40 placeholder="Enter your mail Address">
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<label for="enroll">Enroll No</label>
+					</td>
+					<td>
+						<input type="text" name="enroll" size=40>
+					</td>
+				</tr>
+				
+				<tr>
+					<td rowspan="4">
+
+						<label for="Department">Select Your Department</label> <br><br>
+					</td>
+					<td>
+                        <label for="Department">CSE</label>
+						<input type="checkbox" name="Department" value="CSE"><br>
+					</td>
+				<tr>
+
+				<tr>
+					<td>
+                        <label for="Department">CC</label>
+						<input type="checkbox" name="Department" value="CC"><br>
+					</td>
+				</tr>
+				<tr>
+					<td>
+                        <label for="Department">SE</label>
+						<input type="checkbox" name="Department" value="SE"><br>
+					</td>
+				</tr>
+				<tr>
+
+					<td>
+						<input type="submit" value="SUBMIT"> 
+					</td>
+					<td>
+						<input type="reset" value="RESET">
+					</td>
+				</tr>
+
+
+
+
+
+
+
+				
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		</table>
+		</form>
+	</fieldset>
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+
+
+
+
+
+
+
+
+
+</html>
