@@ -1,0 +1,291 @@
+
+PHP Tutorial
+PHP HOME
+PHP Intro
+PHP Install
+PHP Syntax
+PHP Comments
+PHP Variables
+PHP Echo / Print
+PHP Data Types
+PHP Strings
+PHP Numbers
+PHP Math
+PHP Constants
+PHP Operators
+PHP If...Else...Elseif
+PHP Switch
+PHP Loops
+PHP Functions
+PHP Arrays
+PHP Superglobals
+PHP RegEx
+
+PHP Forms
+PHP Form Handling
+PHP Form Validation
+PHP Form Required
+PHP Form URL/E-mail
+PHP Form Complete
+
+PHP Advanced
+PHP Date and Time
+PHP Include
+PHP File Handling
+PHP File Open/Read
+PHP File Create/Write
+PHP File Upload
+PHP Cookies
+PHP Sessions
+PHP Filters
+PHP Filters Advanced
+PHP Callback Functions
+PHP JSON
+PHP Exceptions
+
+PHP OOP
+PHP What is OOP
+PHP Classes/Objects
+PHP Constructor
+PHP Destructor
+PHP Access Modifiers
+PHP Inheritance
+PHP Constants
+PHP Abstract Classes
+PHP Interfaces
+PHP Traits
+PHP Static Methods
+PHP Static Properties
+PHP Namespaces
+PHP Iterables
+
+MySQL Database
+MySQL Database
+MySQL Connect
+MySQL Create DB
+MySQL Create Table
+MySQL Insert Data
+MySQL Get Last ID
+MySQL Insert Multiple
+MySQL Prepared
+MySQL Select Data
+MySQL Where
+MySQL Order By
+MySQL Delete Data
+MySQL Update Data
+MySQL Limit Data
+
+PHP XML
+PHP XML Parsers
+PHP SimpleXML Parser
+PHP SimpleXML - Get
+PHP XML Expat
+PHP XML DOM
+
+PHP - AJAX
+AJAX Intro
+AJAX PHP
+AJAX Database
+AJAX XML
+AJAX Live Search
+AJAX Poll
+
+PHP Examples
+PHP Examples
+PHP Compiler
+PHP Quiz
+PHP Exercises
+PHP Certificate
+
+PHP Reference
+PHP Overview
+PHP Array
+PHP Calendar
+PHP Date
+PHP Directory
+PHP Error
+PHP Exception
+PHP Filesystem
+PHP Filter
+PHP FTP
+PHP JSON
+PHP Keywords
+PHP Libxml
+PHP Mail
+PHP Math
+PHP Misc
+PHP MySQLi
+PHP Network
+checkdnsrr()
+closelog()
+dns_check_record()
+dns_get_mx()
+dns_get_record()
+fsockopen()
+gethostbyaddr()
+gethostbyname()
+gethostbynamel()
+gethostname()
+getmxrr()
+getprotobyname()
+getprotobynumber()
+getservbyname()
+getservbyport()
+header_register_callback()
+header_remove()
+header()
+headers_list()
+headers_sent()
+http_response_code()
+inet_ntop()
+inet_pton()
+ip2long()
+long2ip()
+openlog()
+pfsockopen()
+setcookie()
+setrawcookie()
+socket_get_status()
+socket_set_blocking()
+socket_set_timeout()
+syslog()
+PHP Output Control
+PHP RegEx
+PHP SimpleXML
+PHP Stream
+PHP String
+PHP Variable Handling
+PHP XML Parser
+PHP Zip
+PHP Timezones
+
+
+PHP header() Function
+
+Example
+
+Send three HTTP headers to prevent page caching:
+<?php
+// Date in the past
+header("Expires: Mon, 26 Jul 1997 05:00:00 GMT");
+header("Cache-Control: no-cache");
+header("Pragma: no-cache");
+?>
+
+<html>
+<body>
+...
+...
+
+Note: There are options that users may set to change the browser's default caching settings. By sending the headers above, you will override any of those settings and force the browser to not cache!
+Definition and Usage
+
+The header() function sends a raw HTTP header to a client.
+
+It is important to notice that the header() function must be called before any actual output is sent!
+Syntax
+header(header, replace, http_response_code)
+Parameter Values
+Parameter 	Description
+header 	Required. Specifies the header string to send
+replace 	Optional. Indicates whether the header should replace a previous similar header or add a new header of the same type. Default is TRUE (will replace). FALSE allows multiple headers of the same type
+http_response_code 	Optional. Forces the HTTP response code to the specified value
+Technical Details
+Return Value: 	Nothing
+PHP Version: 	4.0+
+PHP Changelog: 	PHP 5.1.2: Now prevents that more than one header to be sent at once. This is a protection against header injection attacks
+More Examples
+Example
+
+Let the user be prompted to save a generated PDF file (Content-Disposition header is used to supply a recommended filename and force the browser to display the save dialog box):
+<?php
+header("Content-type:application/pdf");
+
+// It will be called downloaded.pdf
+header("Content-Disposition:attachment;filename='downloaded.pdf'");
+
+// The PDF source is in original.pdf
+readfile("original.pdf");
+?>
+
+<html>
+<body>
+
+...
+...
+
+
+NEW
+
+We just launched
+W3Schools videos
+Explore now
+COLOR PICKER
+colorpicker
+
+Get certified
+by completing
+a PHP
+course today!
+w3schools CERTIFIED . 2022
+CODE GAME
+Code Game
+Top Tutorials
+HTML Tutorial
+CSS Tutorial
+JavaScript Tutorial
+How To Tutorial
+SQL Tutorial
+Python Tutorial
+W3.CSS Tutorial
+Bootstrap Tutorial
+PHP Tutorial
+Java Tutorial
+C++ Tutorial
+jQuery Tutorial
+Top References
+HTML Reference
+CSS Reference
+JavaScript Reference
+SQL Reference
+Python Reference
+W3.CSS Reference
+Bootstrap Reference
+PHP Reference
+HTML Colors
+Java Reference
+Angular Reference
+jQuery Reference
+Top Examples
+HTML Examples
+CSS Examples
+JavaScript Examples
+How To Examples
+SQL Examples
+Python Examples
+W3.CSS Examples
+Bootstrap Examples
+PHP Examples
+Java Examples
+XML Examples
+jQuery Examples
+Web Courses
+HTML Course
+CSS Course
+JavaScript Course
+Front End Course
+SQL Course
+Python Course
+PHP Course
+jQuery Course
+Java Course
+C++ Course
+C# Course
+XML Course
+W3Schools is optimized for learning and training. Examples might be simplified to improve reading and learning. Tutorials, references, and examples are constantly reviewed to avoid errors, but we cannot warrant full correctness of all content. While using W3Schools, you agree to have read and accepted our terms of use, cookie and privacy policy.
+
+Copyright 1999-2022 by Refsnes Data. All Rights Reserved.
+W3Schools is Powered by W3.CSS.
+
+
+
