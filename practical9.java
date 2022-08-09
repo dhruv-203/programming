@@ -43,6 +43,28 @@ System.out.println("\n\n\n");
             System.out.println(i+1);
             }
         }
+
+        //printing for diagonal
+        int counter1;
+        System.out.println("Following are the diagonal 1's");
+        counter=0;
+        counter1=0;
+        for(int i=0;i<6;i++){
+            for(int j=0;j<6;j++){
+                if(i==j && matrix[i][j]==1){
+                    counter++;
+                }
+                if(matrix[i][5-i]==1){
+                    counter1++;
+                }
+            }
+        }
+        if(counter%2!=0){
+            System.out.println("The Principal diagonal has odd 1's");
+        }
+        if(counter1%2!=0){
+            System.out.println("The other diagonal has odd 1's");
+        }
     }
     
     void output(int[][] C,int m,int n){
