@@ -5,13 +5,28 @@ import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.StaggeredGridLayoutManager;
 
+import android.app.AlertDialog;
+import android.app.Dialog;
+import android.hardware.SensorPrivacyManager;
 import android.os.Bundle;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
 import android.widget.LinearLayout;
+import android.widget.Spinner;
+import android.widget.Toast;
+
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 import java.util.ArrayList;
 
 public class RecyclerView extends AppCompatActivity {
-    String choice;
+    String choice,name="",number="";
+    public Button action;
+    public FloatingActionButton button;
+    EditText nameCont,numberCont;
+    CustomAdapter adapter;
 androidx.recyclerview.widget.RecyclerView container ;
 ArrayList<DataStructure> structure = new ArrayList<>();
     @Override
@@ -45,7 +60,36 @@ ArrayList<DataStructure> structure = new ArrayList<>();
         else{
             container.setLayoutManager(new StaggeredGridLayoutManager(3,StaggeredGridLayoutManager.VERTICAL));
         }
-    CustomAdapter adapter = new CustomAdapter(RecyclerView.this,choice,structure);
+        adapter = new CustomAdapter(RecyclerView.this,choice,structure);
         container.setAdapter(adapter);
+        button = findViewById(R.id.floatbutton);
+        Dialog dialog = new Dialog(RecyclerView.this);
+        dialog.setContentView(R.layout.add_update);
+        action = dialog.findViewById(R.id.action);
+        nameCont = dialog.findViewById(R.id.uname);
+        numberCont=dialog.findViewById(R.id.unumber);
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                dialog.show();
+                action.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        name= nameCont.getText().toString();
+                        number = numberCont.getText().toString();
+                        if(!name.equals("") && !number.equals("")) {
+                            structure.add(new DataStructure(R.drawable.person14img, name, number));
+                            adapter.notifyItemInserted(structure.size()-1);
+                            dialog.dismiss();
+                        }
+                        else{
+                            Toast.makeText(RecyclerView.this,"Add Some Values",Toast.LENGTH_LONG).show();
+                        }
+                    }
+                });
+
+            }
+        });
+
     }
 }

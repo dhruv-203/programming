@@ -3,8 +3,11 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Professional/programming/RecyclerView/app/src/main/res/drawable/ic_baseline_add_24.xml" value="0.176" />
+        <entry key="..\:/Professional/programming/RecyclerView/app/src/main/res/layout/action_chooser.xml" value="0.22826086956521738" />
         <entry key="..\:/Professional/programming/RecyclerView/app/src/main/res/layout/activity_main.xml" value="0.264" />
         <entry key="..\:/Professional/programming/RecyclerView/app/src/main/res/layout/activity_recycler_view.xml" value="0.22826086956521738" />
+        <entry key="..\:/Professional/programming/RecyclerView/app/src/main/res/layout/add_update.xml" value="0.22826086956521738" />
         <entry key="..\:/Professional/programming/RecyclerView/app/src/main/res/layout/grid_staggered_layout.xml" value="0.264" />
         <entry key="..\:/Professional/programming/RecyclerView/app/src/main/res/layout/recycle_item_layout.xml" value="0.22826086956521738" />
       </map>

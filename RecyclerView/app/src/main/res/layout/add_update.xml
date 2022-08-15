@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:background="#7EC8E3"
+        android:padding="20dp"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        android:backgroundTint="@color/white"
+        app:layout_constraintTop_toTopOf="parent" >
+        <TextView
+            android:id="@+id/alertTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Provide Following Details To Add an Item"
+            android:textAlignment="center"
+            android:textSize="18dp"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            />
+        <EditText
+            android:id="@+id/uname"
+            android:layout_marginTop="50dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignEnd="@+id/alertTitle"
+            android:hint="Enter Name Here"
+            android:layout_marginHorizontal="20dp"
+            />
+        <EditText
+            android:id="@+id/unumber"
+            android:layout_marginTop="120dp"
+            android:inputType="number"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter Number Here"
+            android:layout_marginHorizontal="20dp"
+            />
+        <Button
+            android:id="@+id/action"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="200dp"
+            android:text="ADD"
+            android:layout_alignEnd="@+id/unumber"
+            android:backgroundTint="#DB5079"
+            android:layout_marginEnd="120dp"
+            />
+
+    </RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
