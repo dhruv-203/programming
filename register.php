@@ -13,6 +13,11 @@
         *{
             margin: 0;padding: 0;
         }
+        .output{
+            position: absolute;
+            top:30%;
+            left:11%;
+        }
         .title{
             height: 15%;
             text-align: center;
@@ -66,18 +71,55 @@
 </head>
 <body>
     <?php  
-    $name_err=$mail_err=$pass_err=$tel_err="";
+    $name_err=$pass_err=$mail_err=$tel_err="";
     $name=$mail=$tel="";
-    if($_SERVER["RESQUEST_METHOD"]=="POST"){
-        if(empty($name)){
-            $name_err="* Name Field is empty";
+    $bol=false;
+    if($_SERVER["REQUEST_METHOD"]=="POST"){
+        if(empty($_REQUEST["Username"])){
+            $name_err="* Username cannot be Empty";
         }
         else{
-            $name=$_POST['Username'];
-            if(preg_match("/^[a-zA-Z-' ]*$/",$name))
-        {
-                $name_err="Only letters and Whitespaces are allowed";
-            }   
+            if(preg_match("([a-zA-Z])",$_REQUEST["Username"])){
+                $name=$_REQUEST["Username"];
+            }
+            else{
+                $name_err="Username should start with an alphabet. All other characters can be alphabets, numbers or an underscore";
+                $bol=true;
+            }
+        }
+        if(empty($_REQUEST["password"])){
+            $pass_err="* Password cannot be Empty";
+        }
+        else{
+            if(!preg_match("/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[#$@!%&*?])[A-Za-z\d#$@!%&*?]{8,30}$/",$_REQUEST["password"])){
+                $pass_err="Min 1 uppercase letter, Min 1 lowercase letter, Min 1 special character, Min 1 number, Min 8 characters, Max 30 characters.";
+                $bol=true;
+            }
+        }    if(empty($_REQUEST["number"])){
+            $tel_err="* Phone Number cannot be Empty";
+        }
+        else{
+            if(preg_match("/^[0-9]{10}$/",$_REQUEST["number"])){
+                $tel=$_REQUEST["number"];
+            }
+            else{
+                $tel_err="Phone number can only have 10 digits";
+                $bol=true;
+            }
+        }    if(empty($_REQUEST["email"])){
+            $mail_err="* Email cannot be Empty";
+        }
+        else{
+            if(filter_var($_REQUEST["email"], FILTER_VALIDATE_EMAIL)){
+                $mail=$_REQUEST["email"];
+            }
+            else{
+                $mail_err="* Not a Valid Email";
+                $bol=true;
+            }
+        }
+        if($bol){
+            $name=$mail=$tel="";
         }
     }
     ?>
@@ -128,5 +170,14 @@
         </form>
     </div>
     </div>
+    <?php
+    echo "<div class='output'>
+    <h2>OUTPUT: </h2><br>
+    <h4> Username: </h4><p>$name</p><br>
+    <h4> Phone Number: </h4><p>$tel</p><br>
+    <h4> Email: </h4><p>$mail</p><br>
+    </div>";
+    ?>
+
 </body>
 </html>
