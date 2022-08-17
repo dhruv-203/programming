@@ -77,6 +77,7 @@
     if($_SERVER["REQUEST_METHOD"]=="POST"){
         if(empty($_REQUEST["Username"])){
             $name_err="* Username cannot be Empty";
+            $bol=true;
         }
         else{
             if(preg_match("([a-zA-Z])",$_REQUEST["Username"])){
@@ -89,6 +90,7 @@
         }
         if(empty($_REQUEST["password"])){
             $pass_err="* Password cannot be Empty";
+            $bol=true;
         }
         else{
             if(!preg_match("/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[#$@!%&*?])[A-Za-z\d#$@!%&*?]{8,30}$/",$_REQUEST["password"])){
@@ -97,6 +99,7 @@
             }
         }    if(empty($_REQUEST["number"])){
             $tel_err="* Phone Number cannot be Empty";
+            $bol=true;
         }
         else{
             if(preg_match("/^[0-9]{10}$/",$_REQUEST["number"])){
@@ -108,6 +111,7 @@
             }
         }    if(empty($_REQUEST["email"])){
             $mail_err="* Email cannot be Empty";
+            $bol=true;
         }
         else{
             if(filter_var($_REQUEST["email"], FILTER_VALIDATE_EMAIL)){
@@ -120,6 +124,9 @@
         }
         if($bol){
             $name=$mail=$tel="";
+        }
+        if(!$bol){
+                header("Location: http://localhost/formRegistration.php?Username=$name&email=$mail&number=$tel");            
         }
     }
     ?>
@@ -170,14 +177,7 @@
         </form>
     </div>
     </div>
-    <?php
-    echo "<div class='output'>
-    <h2>OUTPUT: </h2><br>
-    <h4> Username: </h4><p>$name</p><br>
-    <h4> Phone Number: </h4><p>$tel</p><br>
-    <h4> Email: </h4><p>$mail</p><br>
-    </div>";
-    ?>
+    
 
 </body>
 </html>
