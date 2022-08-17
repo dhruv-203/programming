@@ -19,11 +19,13 @@
             left:11%;
         }
         .title{
-            height: 15%;
+            position: relative;
+            height: 10%;
             text-align: center;
             width: 100%;
             font-size: 25px;
-            margin-top: 10px;
+            top: 43px;
+            /* margin-top: 10px; */
             font-family: monospace;
             font-weight: 700;
         }
@@ -40,6 +42,7 @@
         form{
             width: 100%;
             height: 85%;
+            margin-top: 41px;
         }
         table{
             width: 100%;
@@ -57,15 +60,18 @@
             color: red;
         }
         .submit{
-            width:130px;
+            width: 130px;
             border-radius: 100px;
             height: 50px;
             font-size: 20px;
             background: none;
-            background-color:  #ff4f71;
-            border:1px solid black;
+            background-color: #ff4f71;
+            border: 1px solid black;
             position: relative;
-            left:33%;
+            left: 40%;
+        }
+        label{
+            font-size: 20px;
         }
     </style>
 </head>
@@ -84,7 +90,7 @@
                 $name=$_REQUEST["Username"];
             }
             else{
-                $name_err="Username should start with an alphabet. All other characters can be alphabets, numbers or an underscore";
+                $name_err="* Username should start with an alphabet. All other characters can be alphabets, numbers or an underscore";
                 $bol=true;
             }
         }
@@ -94,7 +100,7 @@
         }
         else{
             if(!preg_match("/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[#$@!%&*?])[A-Za-z\d#$@!%&*?]{8,30}$/",$_REQUEST["password"])){
-                $pass_err="Min 1 uppercase letter, Min 1 lowercase letter, Min 1 special character, Min 1 number, Min 8 characters, Max 30 characters.";
+                $pass_err="* Min 1 uppercase letter, Min 1 lowercase letter, Min 1 special character, Min 1 number, Min 8 characters, Max 30 characters.";
                 $bol=true;
             }
         }    if(empty($_REQUEST["number"])){
@@ -106,7 +112,7 @@
                 $tel=$_REQUEST["number"];
             }
             else{
-                $tel_err="Phone number can only have 10 digits";
+                $tel_err="* Phone number can only have 10 digits";
                 $bol=true;
             }
         }    if(empty($_REQUEST["email"])){
