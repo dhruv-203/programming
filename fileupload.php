@@ -15,7 +15,7 @@
                 $text = fgets($handle);
                 echo $text,"<br>";
             }
-            fclose();
+            fclose($handle);
             
         ?>
     </p>

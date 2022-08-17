@@ -33,8 +33,7 @@
 
         }
         else{
-            return $_GET["error"]=1;
-           
+            header("Location: http://localhost/Registration.php?error=1");
         }
         ?>
         </p>

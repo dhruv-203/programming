@@ -6,8 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
         html,body{
-            margin: 0;padding: 0;
             width: 100%;height: 100%;
+        }
+        *{
+            margin: 0;padding: 0;
         }
         body{
             background-color:#4267B2;
@@ -19,8 +21,9 @@
         fieldset{
             width:100%;
             height:100%;
-        
+            border-color: black;
         }
+       
         .formbody{
             position: absolute;
             top:18%;
@@ -30,10 +33,10 @@
         }
         legend{
             text-align: center;
-            font-size: 25px;
+            font-size: 37px;
         }
         table{
-            /*padding:200px;*/
+            padding:30px;
             background-color:#F8F0E3 ;
             width: 100%;
             height: 100%;
@@ -56,6 +59,9 @@
             position: relative;
             left:42%;
         }
+        .error{
+            color:red;
+        }
 
     </style>
     <title>Document</title>
@@ -68,7 +74,21 @@
         <fieldset>
             <table>
                 <form action="form.php" method="post">
-                    <legend>LOG-IN PAGE</legend>
+                    <legend>LOG-IN PAGE</legend>  
+                    <tr>
+                        <td><Span name="error" class="error"><?php 
+                        $error="";
+                            if($_SERVER['REQUEST_METHOD']=="GET"){
+                                if($_REQUEST["error"]==1){
+                                    $error="* Login Failed due to Invalid Credentials";
+                                }
+                                else{
+                                    $error="";
+                                }
+                            }
+                        echo $error;
+                        ?></Span></td>
+                    </tr>
                     <tr>
                         <td class="center"><label for="usname">Username: </label></td>
                         <td><input type="text" name="usname" id="usname"></td>
