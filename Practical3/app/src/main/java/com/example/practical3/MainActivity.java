@@ -14,6 +14,8 @@ import android.widget.AutoCompleteTextView;
 import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.EditText;
+import android.widget.RadioButton;
+import android.widget.RadioGroup;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.TimePicker;
@@ -33,6 +35,7 @@ public class MainActivity extends AppCompatActivity {
     String[][] States;
     String[] Country;
     int countryPos =100;
+    RadioGroup gender;
     ArrayAdapter autoCompleteStates;
 
     @Override
@@ -51,6 +54,7 @@ public class MainActivity extends AppCompatActivity {
         state=findViewById(R.id.state);
         date=findViewById(R.id.date);
         time=findViewById(R.id.time);
+        gender = findViewById(R.id.gender);
         Country = new String[]{"India","England","USA","Dubai","Russia","Indonesia"};
         States = new String[][]{
             {"Andhra Pradesh", "Arunachal Pradesh","Assam" ,"Bihar" ,"Goa","Gujarat", "Haryana", "Himachal Pradesh", "Jammu & Kashmir", "Karnataka", "Kerala", "Madhya Pradesh","Maharashtra", "Manipur", "Meghalaya", "Mizoram", "Nagaland", "Orissa", "Punjab", "Rajasthan", "Sikkim" ,"Tamil Nadu", "Tripura", "Uttar Pradesh", "West Bengal", "Uttarakhand", "Jharkhand", "Telangana"},
