@@ -31,11 +31,11 @@ class student extends person{
     function student_getter(){
         echo "hello this is student $this->standard\n";
     }
-    function walk(){
+    function walk(){     // method overriding
         echo "student walks\n";
         person::walk();
     }
-    function __call($method,$arguments){
+    function __call($method,$arguments){     // method overloading.....
         if($method=="speaks"){
             if(count($arguments)==0){
                 echo "speaking......\n";
