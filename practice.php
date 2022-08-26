@@ -8,14 +8,16 @@
 </head>
 <body>
     <?php
-        if(($_REQUEST['imap_x']>=0 and $_REQUEST["imap_x"]<500) and ($_REQUEST['imap_y']>=0 and $_REQUEST['imap_y']<100)){
-            echo "hello i am in area 1";
+    if (($_REQUEST['imap_x']>=679 and $_REQUEST["imap_x"]<=799) and ($_REQUEST['imap_y']>=156 and $_REQUEST["imap_y"]<276)){
+        header("Location: https://en.wikipedia.org/wiki/Moon");
+        echo $_REQUEST['imap_x']."  ".$_REQUEST['imap_y'];
+    }
+        else if(($_REQUEST['imap_x']>=0 and $_REQUEST["imap_x"]<1479) and ($_REQUEST['imap_y']>=220 and $_REQUEST['imap_y']<430)){
+            header("Location: https://www.britannica.com/science/mountain-landform");
         }
-        else if (($_REQUEST['imap_x']>=900 and $_REQUEST["imap_x"]<=1400) and ($_REQUEST['imap_y']>=0 and $_REQUEST["imap_y"]<100)){
-            echo "i am in Area 2";
-        }
-        else{
-            echo "i am anywhere";
+         
+        else if(($_REQUEST['imap_x']>=0 and $_REQUEST["imap_x"]<=1479) and ($_REQUEST['imap_y']>=435 and $_REQUEST["imap_y"]<550)){
+            header("Location: https://dictionary.cambridge.org/dictionary/english/river");
         }
 
 ?>
