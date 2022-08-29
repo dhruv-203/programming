@@ -2,7 +2,7 @@
 abstract class parents{
     public $name;
     public $pocketmoney;
-    protected function __construct($name,$pocketmoney){
+    function __construct($name,$pocketmoney){
         $this->name=$name;
         $this->pocketmoney=$pocketmoney;
     }
@@ -11,6 +11,16 @@ abstract class parents{
 interface animal{
     function makeSound();
     function moves();
+}
+
+class Dog implements animal{
+    function makeSound()
+    {
+        echo "Dog barks\n";
+    }
+    function moves(){
+        echo "Dog walks on four legs\n";
+    }
 }
 
 class child extends parents{
@@ -22,9 +32,12 @@ class child extends parents{
     }
     function __contruct($childName,$age,$parentname,$pocketmoney){
         $this->name=$childName;
-        parent::__construct($parentname,$pocketmoney);
         $this->age=$age;
+        parents::__construct($parentname,$pocketmoney);
     }
 }
 $obj = new child("Dhruv","19","Vinodbhai",3500);
+$obj1 = new Dog();
+$obj1->makeSound();
+$obj1->moves();
 ?>
