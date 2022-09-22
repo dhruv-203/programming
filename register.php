@@ -78,7 +78,7 @@
 <body>
     <?php  
     $name_err=$pass_err=$mail_err=$tel_err="";
-    $name=$mail=$tel="";
+    $name=$mail=$pass=$tel="";
     $bol=false;
     if($_SERVER["REQUEST_METHOD"]=="POST"){
         if(empty($_REQUEST["Username"])){
@@ -86,7 +86,7 @@
             $bol=true;
         }
         else{
-            if(preg_match("([a-zA-Z])",$_REQUEST["Username"])){
+            if(preg_match("/^[A-Za-z][A-Za-z0-9_]{7,29}$/",$_REQUEST["Username"])){
                 $name=$_REQUEST["Username"];
             }
             else{
@@ -102,6 +102,9 @@
             if(!preg_match("/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[#$@!%&*?])[A-Za-z\d#$@!%&*?]{8,30}$/",$_REQUEST["password"])){
                 $pass_err="* Min 1 uppercase letter, Min 1 lowercase letter, Min 1 special character, Min 1 number, Min 8 characters, Max 30 characters.";
                 $bol=true;
+            }
+            {
+                $pass=$_REQUEST['password'];
             }
         }    if(empty($_REQUEST["number"])){
             $tel_err="* Phone Number cannot be Empty";
@@ -122,18 +125,30 @@
         else{
             if(filter_var($_REQUEST["email"], FILTER_VALIDATE_EMAIL)){
                 $mail=$_REQUEST["email"];
+                $mail=filter_var($mail,FILTER_SANITIZE_EMAIL);
             }
             else{
                 $mail_err="* Not a Valid Email";
                 $bol=true;
             }
         }
-        if($bol){
-            $name=$mail=$tel="";
-        }
         if(!$bol){
-                header("Location: http://localhost/formRegistration.php?Username=$name&email=$mail&number=$tel");            
+            
+                header("Location: http://localhost/php_server/formRegistration.php?Username=$name&Password=$pass&email=$mail&number=$tel");
         }
+        if(!empty($name_err)){
+            $name="";
+        }
+        if(!empty($pass_err)){
+            $pass="";
+        }
+        if(!empty($mail_err)){
+            $mail="";
+        }
+        if(!empty($tel_err)){
+            $tel="";
+        }
+        
     }
     ?>
     <div class="main">
@@ -147,7 +162,7 @@
                 <label for="usname">Enter Your Username: </label>
                 </td>
                 <td>
-                    <input type="text" name="Username" id="usname"><span class="error">         <?php echo"$name_err";?></span><br>
+                    <input type="text" name="Username" value="<?php echo "$name"; ?>" id="usname"><span class="error">         <?php echo"$name_err";?></span><br>
                 </td>
             </tr>
             <tr>
@@ -155,7 +170,7 @@
                 <label for="pass">Enter Your Password: </label>
                 </td>
                 <td>
-                <input type="password" name="password" id="pass"><span class="error">           <?php echo"$pass_err";?></span><br>
+                <input type="password" name="password" value="<?php echo "$pass"; ?>" id="pass"><span class="error">           <?php echo"$pass_err";?></span><br>
                 </td>
             </tr>
             <tr>
@@ -163,7 +178,7 @@
                 <label for="Phone">Enter Your Phone Number: </label>
                 </td>
                 <td>
-            <input type="tel" name="number" id="Phone"><span class="error">                     <?php echo"$tel_err";?></span><br>
+            <input type="tel" name="number"  value="<?php echo "$tel"; ?>" id="Phone"><span class="error">                     <?php echo"$tel_err";?></span><br>
                 </td>
             </tr>
             <tr>
@@ -171,7 +186,7 @@
                 <label for="email">Enter Your Email Address: </label>
                 </td>
                 <td>
-                    <input type="email" name="email" id="email"><span class="error">            <?php echo"$mail_err";?></span><br>
+                    <input type="email" name="email" value="<?php echo "$mail"; ?>" id="email"><span class="error">            <?php echo"$mail_err";?></span><br>
                 </td>
             </tr>
             <tr>
