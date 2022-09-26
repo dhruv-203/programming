@@ -1,8 +1,6 @@
 <!doctype html>
 <html lang="en">
 <?php $connect=mysqli_connect("localhost","root","","UserDetails");
-    $name_err="";
-    $pass_err="";
 ?>
 <head>
     <meta charset="utf-8">
@@ -56,20 +54,20 @@ if($_SERVER['REQUEST_METHOD']=="POST"){
         $res=mysqli_stmt_get_result($prep);
         $value=mysqli_fetch_assoc($res);
     }
-    if($_REQUEST['password']==$value['PASS']){
-        header("Location: http://localhost/programming/changepass.php");
+    if($_REQUEST['curr_password']==$value['PASS']){
+
     }
 }
 ?>
 
 <body>
-    <p class="h2 fs-1 text-danger">SIGN-IN HERE</p>
+    <p class="h2 fs-1 text-danger">Change Password</p>
     <div class="main container">
         <form action="" method="POST">
             <div class="row mb-3 align-self-center justify-content-center">
-                <label for="inputEmail3" class="text-danger col-sm-2 fs-4 col-form-label">Username</label>
+                <label for="inputEmail3" class="text-danger col-sm-2 fs-4 col-form-label">Current Password: </label>
                 <div class="col-sm-5">
-                    <input type="text" name="username" class="form-control" id="inputEmail3"><span class="error">         <?php echo"$name_err";?></span><br>
+                    <input type="text" name="curr_password" class="form-control" id="inputEmail3"><span class="error">         <?php echo"$name_err";?></span><br>
                 </div>
             </div>
             <div class="row mb-3 align-self-center justify-content-center">
