@@ -3,6 +3,7 @@
 <?php $connect=mysqli_connect("localhost","root","","UserDetails");
     $name_err="";
     $pass_err="";
+    session_start();
 ?>
 <head>
     <meta charset="utf-8">
@@ -57,6 +58,7 @@ if($_SERVER['REQUEST_METHOD']=="POST"){
         $value=mysqli_fetch_assoc($res);
     }
     if($_REQUEST['password']==$value['PASS']){
+        $_SESSION['username']=$_REQUEST['username'];
         header("Location: http://localhost/programming/changepass.php");
     }
 }

@@ -1,6 +1,8 @@
 <!doctype html>
 <html lang="en">
 <?php $connect=mysqli_connect("localhost","root","","UserDetails");
+    session_start();
+    $username=$_SESSION['username'];
 ?>
 <head>
     <meta charset="utf-8">
@@ -44,7 +46,7 @@
 if($_SERVER['REQUEST_METHOD']=="POST"){
     $sql="SELECT PASS FROM USERS WHERE USERNAME=?";
     $prep=mysqli_prepare($connect,$sql);
-    if(!mysqli_stmt_bind_param($prep,'s',$_REQUEST['username'])){
+    if(!mysqli_stmt_bind_param($prep,'s',$username)){
         echo "Failed: "+mysqli_stmt_error($prep);
     }
     if(!mysqli_stmt_execute($prep)){
@@ -54,9 +56,31 @@ if($_SERVER['REQUEST_METHOD']=="POST"){
         $res=mysqli_stmt_get_result($prep);
         $value=mysqli_fetch_assoc($res);
     }
-    if($_REQUEST['curr_password']==$value['PASS']){
+    if($_REQUEST['curr_password']==$value['PASS']&&$_REQUEST['new_password']==$_REQUEST['re_password']&&$_REQUEST['new_password']!=""){
+        $sql="UPDATE USERS SET PASS=? WHERE USERNAME=?";
+        $prep=mysqli_prepare($connect,$sql);
+        if(!empty($username)){
 
+        if(!mysqli_stmt_bind_param($prep,'ss',$_REQUEST['new_password'],$username)){
+            echo "Failed: "+mysqli_stmt_error($prep);
+        }
+        if(!mysqli_stmt_execute($prep)){
+            echo "Failed: "+mysqli_stmt_error($prep);
+        }
+        else{
+            echo "<h1>Password Changed Successfully</h1>";
+            session_unset();
+            session_destroy();
+        }
+        }
+        else{
+            echo "Your Password is already changed";
+        }
     }
+    else{
+        echo "<h1>Bad Request</h1>";
+    }
+    
 }
 ?>
 
@@ -65,15 +89,21 @@ if($_SERVER['REQUEST_METHOD']=="POST"){
     <div class="main container">
         <form action="" method="POST">
             <div class="row mb-3 align-self-center justify-content-center">
-                <label for="inputEmail3" class="text-danger col-sm-2 fs-4 col-form-label">Current Password: </label>
+                <label for="curr_password" class="text-danger col-sm-2 fs-4 col-form-label">Current Password: </label>
                 <div class="col-sm-5">
-                    <input type="text" name="curr_password" class="form-control" id="inputEmail3"><span class="error">         <?php echo"$name_err";?></span><br>
+                    <input type="password" name="curr_password" class="form-control" id="curr_password">
                 </div>
             </div>
             <div class="row mb-3 align-self-center justify-content-center">
-                <label for="inputPassword3" class="text-danger col-sm-2 fs-4 col-form-label">Password</label>
+                <label for="inputPassword3" class="text-danger col-sm-2 fs-4 col-form-label">New Password: </label>
                 <div class="col-sm-5">
-                    <input type="password" name="password" class="form-control" id="inputPassword3"><span class="error">           <?php echo"$pass_err";?></span><br>
+                    <input type="password" name="new_password" class="form-control" id="newpass">
+                </div>
+            </div>
+            <div class="row mb-3 align-self-center justify-content-center">
+                <label for="reenternewpass" class="text-danger col-sm-2 fs-4 col-form-label">Re-Enter New Password: </label>
+                <div class="col-sm-5">
+                    <input type="text" name="re_password" class="form-control" id="reenternewpass">
                 </div>
             </div>
             <div class="subcon justify-content-center col-12">
