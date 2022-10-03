@@ -13,7 +13,7 @@ setcookie("oreo","strawberry",time()+(24*60*60)*30,"/"); //cookie will expire af
 <body>
     <?php
     if(count($_COOKIE)>0){
-        echo "COOKIE are enadkjasbhkjidas<br>";
+        echo "COOKIE are enabled<br>";
     }
     else{
         echo "Cookie are disable";
