@@ -10,7 +10,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Bootstrap demo</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
-    <script src="count.js"></script>
 </head>
 <style>
     body,
@@ -46,6 +45,7 @@
 </style>
 <?php 
 if($_SERVER['REQUEST_METHOD']=="POST"){
+    $_SESSION['username']=$_REQUEST['username'];
     $sql="SELECT PASS FROM USERS WHERE USERNAME=?";
     $prep=mysqli_prepare($connect,$sql);
     if(!mysqli_stmt_bind_param($prep,'s',$_REQUEST['username'])){
@@ -58,9 +58,26 @@ if($_SERVER['REQUEST_METHOD']=="POST"){
         $res=mysqli_stmt_get_result($prep);
         $value=mysqli_fetch_assoc($res);
     }
-    if($_REQUEST['password']==$value['PASS']){
+    if(!empty($_REQUEST['username']) && !empty($_REQUEST['password']) && $_REQUEST['password']==$value['PASS']){
         echo "Successful<br>";
-       
+
+        //         setcookie("$_SESSION[username]","1",time()+(24*60*60)*30,"/");
+//          $prep=mysqli_query($connect,"SELECT USERNAME FROM USERS");
+//         $res=mysqli_fetch_all($prep);
+//         // print_r($res);
+//         $count=0;
+//         $arr = array();
+//         for($i=0;$i < count($res);$i++){
+//          array_push($arr,$res[$i][0]);
+//          }
+//          for($i=0;$i<count($arr);$i++){
+//          if(key_exists($arr[$i],$_COOKIE)){
+//          $count++;
+//          }
+//         }
+//  echo $count;
+
+        header('Location: http://localhost/programming/practical7b.php');
     }
     else{
         echo mysqli_error($connect);
@@ -70,7 +87,7 @@ if($_SERVER['REQUEST_METHOD']=="POST"){
 ?>
 
 <body>
-    <p class="h2 fs-1 text-danger" id="count" ></p>
+    <p class="fs-1 text-danger" id="count" ></p>
     <p class="h2 fs-1 text-danger">SIGN-IN HERE</p>
     <div class="main container">
         <form action="" method="POST">

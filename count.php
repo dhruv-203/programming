@@ -1,5 +1,8 @@
 <?php 
- setcookie($_REQUEST['username'],"1",time()+(24*60*60)*30,"/");
+session_start();
+if(isset($_SESSION['username'])){
+    $connect=mysqli_connect("localhost","root","","UserDetails");
+ setcookie("$_SESSION[username]","1",time()+(24*60*60)*30,"/");
  $prep=mysqli_query($connect,"SELECT USERNAME FROM USERS");
  $res=mysqli_fetch_all($prep);
  // print_r($res);
@@ -14,4 +17,7 @@
      }
  }
  echo $count;
+session_unset();
+session_destroy();
+}
 ?>
