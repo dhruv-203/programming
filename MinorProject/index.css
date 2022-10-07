@@ -1,0 +1,74 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+html,body{
+    width: 100%;
+    height: 100%;
+}
+.main{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.globalContainer{
+    width: 100%;
+    height: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+.Information{
+    width: 30%;
+    height: 70%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 0 10%;
+    font-size: 1.5rem;
+}
+.brandLogo{
+    height: 50%;
+    width: 100%;
+    padding: 10% 15% 0 0;
+}
+#logo{
+    width: 100%;
+    height: 100%;
+}
+.loginRegister{
+    width: 30%;
+    height: 100%;
+    padding:25px;
+}
+.loginRegister>form{
+    display: flex;
+    height: 100%;
+    width: 100%;
+    padding: 25px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+input,button{
+    height: 12%;
+    width: 91%;
+    /* padding:20px; */
+    font-size: 1.5rem;
+}
+hr{
+    width: 91%;
+}
+.brandTagLine{
+    margin-left: 5%;
+    padding-left: 5%;
+    font-family: SFProDisplay-Regular, Helvetica, Arial, sans-serif;
+    font-size: 2.5rem;
+    font-weight: 500;
+    line-height: 45px;
+
+}
