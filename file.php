@@ -3,6 +3,9 @@ if(($_SERVER['REQUEST_METHOD']=="POST")&&($_FILES['files']['size']<4000000)){
    $arr = array("image/png","image/jpg","image/jpeg","application/pdf","text/x-php");
 //    echo mime_content_type($_FILES['files']['tmp_name']);
     if(in_array(mime_content_type($_FILES['files']['tmp_name']),$arr)){
+        $destFile = __DIR__ . '/try/' . $_FILES['files']['name'];
+        move_uploaded_file($_FILES['files']['tmp_name'],$destFile);
+        chmod($_FILES['files']['name'],0666);
         foreach ($_FILES['files'] as $key => $value) {
             echo $key.": ".$value."<br>";
         }
@@ -24,6 +27,13 @@ if(($_SERVER['REQUEST_METHOD']=="POST")&&($_FILES['files']['size']<4000000)){
         <label for="file">Upload Here: </label>
         <input type="file" name="files" id="file">
         <input type="submit" value="submit">
+            
     </form>
+    <?php if($_SERVER['REQUEST_METHOD']=='POST'){?>
+        <a href="try/<?php $_FILES['files']['name'] ?>"
+        ><button>Download</button></a>
+        <?php 
+        }       
+        ?>
 </body>
 </html>

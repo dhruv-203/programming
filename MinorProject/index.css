@@ -8,17 +8,33 @@ html,body{
 }
 .RegisterDialog{
     position: absolute;
-    height: 65%;
+    height: 76%;
     width: 30%;
     background-color: white;
-    top:20%;
-    left:36%;
+    top: 13%;
+    left: 36%;
     z-index: 55555;
-    display: flex;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    display: none;
     flex-direction: column;
     align-items: flex-start;
-    justify-content:start;
+    justify-content: start;
     gap: 20px;
+}
+#tagGender{
+    position: relative;
+    right:32%;
+}
+.close{
+    width: 53px;
+    height: 54px;
+    background: none;
+    border: none;
+    text-decoration: none;
+    background-image: url(close.png);
+    position: absolute;
+    left: 89%;
+    top: 12px;
 }
 #createNewAcc{
     display: flex;
@@ -31,7 +47,7 @@ html,body{
 }
 #signUp{
     position: relative;
-    top:7%
+    margin-top: 21px;
 }
 .main{
     width: 100%;
@@ -58,6 +74,9 @@ html,body{
     padding: 0 10%;
     font-size: 1.5rem;
 }
+.registerHeader{
+padding: 10px;
+}
 .brandLogo{
     height: 50%;
     width: 100%;
@@ -72,8 +91,12 @@ html,body{
     height: 100%;
     padding:25px;
 }
+.male,.female{
+    display: flex;
+}
 .genderCont{
     display: flex;
+    gap:35px;
 }
 .loginRegister>form{
     display: flex;
@@ -83,6 +106,7 @@ html,body{
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
+    -webkit-filter: blur();
 }
 input,button{
     height: 12%;
