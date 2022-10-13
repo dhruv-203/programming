@@ -8,7 +8,31 @@
     <title>Facebook – log in or sign up</title>
 </head>
 <body>
+    <div class="RegisterDialog" id="NewAcc">
+        <div class="registerHeader">
+            <h1>Sign Up</h1>
+            <span class="SignUpTagline"><p>it's quick and easy</p></span>
+        </div>
+        <hr>
+        <form action="" method="post" id="createNewAcc">
+            <input type="text" name="NAME" id="NAME" placeholder="Name">
+            <input type="tel" name="Number" id="Number" placeholder="Mobile Number">
+            <input type="email" name="Email" id="Email" placeholder="Email Address">
+            <input type="password" name="Pass" id="Pass" placeholder="Password">
+            <input type="date" name="dob" id="dob">
+            <label for="Gender">Select Your Gender: </label>
+            <div class="genderCont">
+                <label for="Male">Male</label>
+                <input type="radio" name="Gender" id="Male" value="Male">
+                <label for="Female">Female</label>
+                <input type="radio" name="Gender" id="Female" value="Female">
+            </div>
+            
+            <button class="register" id="signUp">Sign Up</button>
+        </form>
+    </div>
     <div class="main">
+
     <div class="globalContainer">
         <div class="Information">
             <div class="brandLogo">
