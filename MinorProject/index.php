@@ -19,12 +19,12 @@
             </span>
         </div>
         <hr>
-        <form action="" method="post" id="createNewAcc">
-            <input type="text" name="NAME" id="NAME" placeholder="Name">
-            <input type="tel" name="Number" id="Number" placeholder="Mobile Number">
-            <input type="email" name="Email" id="Email" placeholder="Email Address">
-            <input type="password" name="Pass" id="Pass" placeholder="Password">
-            <input type="date" name="dob" id="dob">
+        <form action="register.php" method="post" id="createNewAcc">
+            <input type="text" name="NAME" id="NAME" placeholder="Name"><br>
+            <input type="tel" name="Number" id="Number" placeholder="Mobile Number"><br>
+            <input type="email" name="Email" id="Email" placeholder="Email Address"><br>
+            <input type="password" name="Pass" id="Pass" placeholder="Password"><br>
+            <input type="date" name="dob" id="dob"><br>
             <label for="Gender" id="tagGender">Select Your Gender: </label>
             <div class="genderCont">
                 <div class="male">
@@ -35,11 +35,13 @@
                     <label for="Female">Female</label>
                     <input type="radio" name="Gender" id="Female" value="Female">
                 </div>
-            </div>
+            </div><br>
+
 
             <button class="register" id="signUp">Sign Up</button>
         </form>
     </div>
+    
     <div class="main" id="bg">
 
         <div class="globalContainer">
@@ -53,10 +55,13 @@
             </div>
             <div class="loginRegister">
                 <form action="login.php" method="post">
+                    <?php if(isset($_REQUEST['error'])){
+                        echo "<span class=error >*Invalid Credentials</span>";
+                    } ?>
                     <input type="text" placeholder="Email or Password" name="usname" id="name">
                     <input type="password" placeholder="Password" name="pass" id="pass">
                     <input type="submit" value="Log in" id="submit">
-                    <a href="#">Forgotten password?</a>
+                    <a href="forget.php">Forgotten password?</a>
 
                     <hr>
 

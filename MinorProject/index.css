@@ -114,6 +114,14 @@ input,button{
     /* padding:20px; */
     font-size: 1rem;
 }
+input[type="radio"]{
+    height: auto;
+    width: auto;
+    margin:3px;
+}
+.error {
+    color: red;
+}
 input{
     border: 1px solid #ccd0d5;
     padding-left: 15px;
