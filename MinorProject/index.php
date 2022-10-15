@@ -20,11 +20,11 @@
         </div>
         <hr>
         <form action="register.php" method="post" id="createNewAcc">
-            <input type="text" name="NAME" id="NAME" placeholder="Name"><br>
-            <input type="tel" name="Number" id="Number" placeholder="Mobile Number"><br>
-            <input type="email" name="Email" id="Email" placeholder="Email Address"><br>
-            <input type="password" name="Pass" id="Pass" placeholder="Password"><br>
-            <input type="date" name="dob" id="dob"><br>
+            <input type="text" name="NAME" id="NAME" placeholder="Name"><br><span id="name_err" class='error'></span>
+            <input type="tel" name="Number" id="Number" placeholder="Mobile Number"><br><span id="num_err" class='error'></span>
+            <input type="email" name="Email" id="Email" placeholder="Email Address"><br><span id="email_err" class='error'></span>
+            <input type="password" name="Pass" id="Pass" placeholder="Password"><br><span id="pass_err" class='error'></span>
+            <input type="date" name="dob" id="dob"><br><span id="dob_err" class="error"></span>
             <label for="Gender" id="tagGender">Select Your Gender: </label>
             <div class="genderCont">
                 <div class="male">
@@ -35,8 +35,7 @@
                     <label for="Female">Female</label>
                     <input type="radio" name="Gender" id="Female" value="Female">
                 </div>
-            </div><br>
-
+            </div>
 
             <button class="register" id="signUp">Sign Up</button>
         </form>

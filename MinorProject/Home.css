@@ -18,19 +18,6 @@ html,body{
     align-items: center;
     justify-content: center;
 }
-.createPostCont{
-    display: flex;
-    height: 100%;
-    width:20%;
-    align-items: center;
-    justify-content: center ;
-}
-.addLogo{
-    height: 32px;
-    width: 39px;
-    background-repeat: no-repeat;
-    background-image: url(addpost.png);
-}
 .body{
     width: 100%;
     height: 100%;
@@ -45,6 +32,11 @@ html,body{
     width: 50%;
     height: 100%;
     background-color: white;
+    overflow-y: scroll;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
 }
 .intermidiatePost{
     height: 46%;
@@ -71,4 +63,9 @@ input[type="file"]{
 }
 .innerdiv{
     margin-top: 59px;
+}
+.card{
+    height: 38%;
+    width: 55%;
+    background-color: aqua;
 }

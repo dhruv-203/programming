@@ -10,8 +10,9 @@
         if(!mysqli_query($conn,$sql)){
             echo mysqli_error($conn);
         }
-
-        
+        else{
+            header('Location: http://localhost/programming/MinorProject/home.html');
+        }
     }
 
 ?>

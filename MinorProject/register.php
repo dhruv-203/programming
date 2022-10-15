@@ -6,6 +6,7 @@ $tel = $_REQUEST['Number'];
 $mail = $_REQUEST['Email'];
 $date = $_REQUEST['dob'];
 $gender = $_REQUEST['Gender'];
+
 $sql = "INSERT INTO USERS VALUES(?,?,?,?,?,?)";
             $prep = mysqli_prepare($conn, $sql);
             if (!mysqli_stmt_bind_param($prep, "sissss", $name,$tel,$mail,$pass,$date,$gender)) {
