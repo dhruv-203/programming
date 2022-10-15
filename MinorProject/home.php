@@ -17,11 +17,11 @@ if($_SESSION['LOGIN']!=1){
    
     <div class="main" id="bg" >
         <div class="nav">
-            <div class="createPostCont" >
-                <form action="file.php" method="post" enctype="multipart/form-data">
+            <div class="createPostCont" style="height: 100%; width:100%;" >
+                <form action="file.php" method="post" enctype="multipart/form-data" style="display:flex;justify-content:space-around; height:100%; width:100%;">
                     <input type="button" value="New Posts" onclick="myfun();">
                     <label for="uploadcont" id="uploadlabel">
-                        Select Image
+                        <img src="Uploadicon.png" height="50px" width="50px" style="position:relative;top:15px" alt="">
                         <input type="file" name="files" id="uploadcont">
                     </label>
                     <input type="submit" value="Submit">

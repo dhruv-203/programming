@@ -27,9 +27,9 @@ function validate(){
 }
 function Ajax() {
     var register = new XMLHttpRequest();
-    register.onreadystatechange = ()=>{
+    register.onreadystatechange = function(){
         if(this.readyState==4 && this.status==200){
-            document.getElementById('status').innerText=this.responseText;
+            document.getElementById('status').innerHTML = this.responseText;
         }
     }
     register.open("GET","register.php?NAME="+nam+"&Pass="+pass+"&Number="+num+"&Email="+email+"&dob="+dob+"&Gender="+gender, true);
