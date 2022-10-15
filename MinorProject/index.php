@@ -19,12 +19,13 @@
             </span>
         </div>
         <hr>
-        <form action="register.php" method="post" id="createNewAcc">
-            <input type="text" name="NAME" id="NAME" placeholder="Name"><br><span id="name_err" class='error'></span>
-            <input type="tel" name="Number" id="Number" placeholder="Mobile Number"><br><span id="num_err" class='error'></span>
-            <input type="email" name="Email" id="Email" placeholder="Email Address"><br><span id="email_err" class='error'></span>
-            <input type="password" name="Pass" id="Pass" placeholder="Password"><br><span id="pass_err" class='error'></span>
-            <input type="date" name="dob" id="dob"><br><span id="dob_err" class="error"></span>
+        <form name="Register" method="post" id="createNewAcc">
+            <span id="status"></span>
+            <input type="text" name="NAME" id="NAME" required placeholder="Name">
+            <input type="tel" name="Number" required id="Number" placeholder="Mobile Number">
+            <input type="email" required name="Email" id="Email" placeholder="Email Address">
+            <input type="password" required name="Pass" id="Pass" placeholder="Password">
+            <input type="date" required name="dob" id="dob">
             <label for="Gender" id="tagGender">Select Your Gender: </label>
             <div class="genderCont">
                 <div class="male">
@@ -37,7 +38,7 @@
                 </div>
             </div>
 
-            <button class="register" id="signUp">Sign Up</button>
+            <button class="register" onclick="validate(); return false;" id="signUp">Sign Up</button>
         </form>
     </div>
     
@@ -70,7 +71,23 @@
         </div>
     </div>
 </body>
+<script src="validation.js"></script>
 <script>
+var today = new Date();
+var dd = today.getDate();
+var mm = today.getMonth() + 1; //January is 0!
+var yyyy = today.getFullYear();
+
+if (dd < 10) {
+   dd = '0' + dd;
+}
+
+if (mm < 10) {
+   mm = '0' + mm;
+} 
+    
+today = yyyy + '-' + mm + '-' + dd;
+document.getElementById("dob").setAttribute("max", today);
 
     var dialog = document.getElementById('NewAcc');
     var bg = document.getElementById('bg');

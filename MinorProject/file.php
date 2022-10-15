@@ -11,7 +11,7 @@
             echo mysqli_error($conn);
         }
         else{
-            header('Location: http://localhost/programming/MinorProject/home.html');
+            header('Location: http://localhost/programming/MinorProject/home.php');
         }
     }
 

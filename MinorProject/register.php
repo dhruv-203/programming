@@ -15,8 +15,6 @@ $sql = "INSERT INTO USERS VALUES(?,?,?,?,?,?)";
             if (!mysqli_stmt_execute($prep)) {
                 echo mysqli_stmt_error($prep);
             } else {
-                echo "Registered Successfully....";
-                sleep(4);
-                header("Location: http://localhost/programming/MinorProject/");
             }
+            echo "Registered Successfully....";
 ?>

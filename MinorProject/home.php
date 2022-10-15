@@ -1,3 +1,9 @@
+<?php 
+session_start();
+if($_SESSION['LOGIN']!=1){
+    header('Location:http://localhost/programming/MinorProject/');
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>

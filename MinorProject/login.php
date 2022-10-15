@@ -18,7 +18,8 @@ if (!mysqli_stmt_execute($prep)) {
 if ($_SERVER['REQUEST_METHOD'] == "POST") {
     if (!empty($_REQUEST['usname']) && !empty($_REQUEST['pass']) && $_REQUEST['pass']==$value['Password']) {
         $_SESSION['NAME'] = $_REQUEST['usname'];
-        header("Location: http://localhost/programming/MinorProject/home.html");
+        $_SESSION['LOGIN']=1;
+        header("Location: http://localhost/programming/MinorProject/home.php");
     }
     else{
         header('Location:http://localhost/programming/MinorProject/?error=1');
