@@ -7,7 +7,7 @@ function validate(){
     gender = document.Register.Gender.value;
     dob=document.Register.dob.value;    
     if(nam==""||nam==null||!nam.match("[a-zA-Z ]")){
-        alert(nam);
+        alert("Please Your Name Properly....");
     }
     else if(num==""||num==null||!num.match(/^\d{10}$/)){
         alert("Please Enter Phone Number Properly.. ");

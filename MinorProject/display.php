@@ -1,5 +1,6 @@
 <?php 
 require "connection.php";
+
 $sql = 'SELECT * FROM Images';
 $res = mysqli_query($conn,$sql);
 $data=mysqli_fetch_all($res);
