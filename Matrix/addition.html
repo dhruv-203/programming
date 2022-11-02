@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Addition</title>
+    <link rel="stylesheet" href="addition.css">
+    <link rel="shortcut icon" href="add.ico" type="image/x-icon">
+<link rel="icon" href="add.ico" type="image/x-icon">
+</head>
+
+<body>
+    <div class="main">
+        <div class="top-nav">
+        <button id="back"></button>
+        <div class="heading" id="heading">ENTER DIMENSIONS</div>
+        <button id="reset"></button>
+        </div>
+        <div class="chooser-after">
+            <div class="rowColSelector">
+                <div class="RowCont">
+                    <label for="Row">Enter Number of Rows: </label><input type="number" min="1" max="6" name="Row" id="Row" onkeyup="fun();">
+                </div>
+                <div class="ColCont">
+                    <label for="Column">Enter Number of Columns: </label><input type="number" min="1" max="6" name="Column" id="Column" onkeyup="fun();">
+                </div>
+            </div>
+           <div class="matrixContainer">
+            <div class="matrixA"></div>
+            <span id="plus" >+</span>
+            <div class="matrixB"></div>
+           </div>
+        </div>
+    </div>
+</body>
+<script src="addition.js"></script>
+
+</html>

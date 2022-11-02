@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matrix Calculator</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+</head>
+
+<body>
+    <div class="body">
+        <div class="main">
+            <div class="heading">MATRIX SOLVER</div>
+            <div class="buttonConatainer">
+                <button class="addition"><a href="addition.html">Addition</a></button>
+                <button class="subtraction"><a href="subtraction.html">Subtraction</a></button>
+                <button class="multiplication"><a href="Multiplication.html">Multiplication</a></button>
+                <button class="Transpose"><a href="#">Transpose</a></button>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+
+    document.querySelectorAll('button').forEach((r) => {
+        r.onmouseover = () => { r.children[0].style.color = 'black'; }
+        r.onmouseout = () => { r.children[0].style.color = 'white'; }
+    });
+    document.getElementsByClassName('addition')[0].addEventListener('click', () => {
+        location.href = 'addition.html';
+    })
+    document.getElementsByClassName('subtraction')[0].addEventListener('click', () => {
+        location.href = 'subtraction.html';
+    })
+    document.getElementsByClassName('multiplication')[0].addEventListener('click', () => {
+        location.href = 'multiplication.html';
+    })
+</script>
+
+</html>

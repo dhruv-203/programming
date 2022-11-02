@@ -1,0 +1,207 @@
+html,body{
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    min-width: 800px;
+    min-height: 800px;
+}
+.top-nav{
+display: flex;
+width:60vw;
+height: auto;
+align-items: center;
+justify-content: space-around;
+margin-top: 2vh;
+padding: 20px 20px 0 20px;
+min-width: 600px;
+}
+button{
+    font-size: 1.5rem;
+    height: 50px;
+    width: 50px;
+    border-radius: 1500px;
+    background-image: linear-gradient(25deg,#d64c7f,#ee4758 50%);
+    border: none;
+    padding: 5px;
+    color: white;
+    -webkit-border-radius: 1500px;
+    -moz-border-radius: 1500px;
+    -ms-border-radius: 1500px;
+    -o-border-radius: 1500px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: left;
+    visibility:hidden;
+}
+#back{
+    background-image: url(back-arrow.png);
+}
+#reset{
+    background-image: url(new.png);
+    background-size: contain;
+}
+button:hover{
+    border:  white 2px solid;
+    background: whitesmoke;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: left;
+    color: black;
+}
+.main {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    background: #200122;
+    background: -webkit-linear-gradient(to right, #6f0000, #200122);
+    background: linear-gradient(to right, #6f0000, #200122);
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    min-width: 800px;
+    min-height: 800px;
+    gap:25px
+}
+.chooser-after{
+    font-family: sans-serif;
+    color: black;
+    height: 66vh;
+    width: 60vw;
+    background-image: linear-gradient(to right, #c6ffdd, #fbd786, #f7797d);
+    padding: 32px;
+    min-width: 600px;
+    min-height: 400px;
+    /* max-height: 800px; */
+    /* max-width: 800px; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 40px;
+}
+.chooser{
+    font-family: sans-serif;
+    color: black;
+    font-weight: 500;
+    height: 40vh;
+    width: 25vw;
+    font-size: 1.2rem;
+    background-image: linear-gradient(to right, #c6ffdd, #fbd786, #f7797d);
+    padding: 32px;
+    min-width: 300px;
+    min-height: 300px;
+    max-height: 500px;
+    max-width: 500px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+}
+.chooser>.rowColSelector>div>input[type=number]{
+    width:60px;
+    height: 55px;
+    padding: 5px;
+}
+.chooser-after>.rowColSelector>div>input[type=number]{
+    width:30px;
+    height: 25px;
+    padding: 5px;
+}
+label{
+    justify-self: left;
+    padding: 5px;
+}
+.heading{
+    font-family: sans-serif;
+    color: white;
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+.chooser-after>div.rowColSelector,.chooser>div.rowColSelector{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 20px;
+}
+.rowColSelector{
+    height: 26vh;
+    width: 50vw;
+    background-image: linear-gradient(to right, #c6ffdd, #fbd786, #f7797d);
+    padding: 32px;
+    min-width: 600px;
+    position: relative;
+    top: 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding-bottom: 20px;
+    min-width: 665px;
+}
+.MatA,.MatB{
+    width: 43%;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-start;
+    border: 1px solid black;
+}
+
+
+input[type=number]:focus{
+    border: none;
+}
+input[type=number]:invalid{
+    border: 3px solid red;
+}
+input[type=number]:valid{
+    border: 3px solid blue;
+}
+.chooser-after>.rowColSelector>div{
+    gap:10px;
+    align-self:flex-start;
+}
+.matrixContainer{
+    margin: 15px;
+    background-color: #6f0000;
+    width: 100%;
+    height: 95%;
+    display: flex;
+    padding: 10px;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    min-width: 550px;
+    min-height: 320px;
+}
+.matrixContainer>div{
+    height: 80%;
+    width: 43%;
+    padding: 10px;
+    background-color: #c6ffdd;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: stretch;
+}
+#plus{
+    color: white;
+    font-size: 3rem;
+}
+#temp{
+    position: absolute;
+    top:0;
+    left:99%
+}
+
+.rowofA,.rowofB{
+    display: flex;
+    align-items:stretch;
+    justify-content: space-around;
+    width: 100%;
+}
+.rowofA>input[type=number],.rowofB>input[type=number]{
+    width:12%;
+    height: 100%;
+}

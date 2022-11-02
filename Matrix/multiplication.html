@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multiplication</title>
+    <link rel="stylesheet" href="multiplication.css">
+    <link rel="shortcut icon" href="add.ico" type="image/x-icon">
+    <link rel="icon" href="add.ico" type="image/x-icon">
+</head>
+
+<body>
+    <div class="main">
+        <div class="top-nav">
+            <button id="back"></button>
+            <div class="heading" id="heading">ENTER DIMENSIONS</div>
+            <button id="reset"></button>
+        </div>
+        <div class="rowColSelector">
+            <div class="MatA">
+                <div class="rowA">
+                    <label for="RowA">Enter Number of Rows of A: </label><input type="number" min="1" max="6"
+                        name="RowA" id="RowA" onkeyup="inflateA();">
+                </div>
+                <div class="colA">
+                    <label for="ColumnA">Enter Number of Columns of A: </label><input type="number" min="1" max="6"
+                        name="ColumnA" id="ColumnA" onkeyup="inflateA();">
+                </div>
+            </div>
+            <div class="MatB">
+                <div class="rowB">
+                    <label for="RowB">Enter Number of Rows of B: </label><input type="number" min="1" max="6"
+                        name="RowB" id="RowB" onkeyup="inflateB();">
+                </div>
+                
+                <div class="colB">
+                    <label for="ColumnB">Enter Number of Columns of B: </label><input type="number" min="1" max="6"
+                        name="ColumnB" id="ColumnB" onkeyup="inflateB();">
+                </div>
+            </div>
+        </div>
+        <div class="chooser-after">
+            <div class="matrixContainer">
+                <div class="matrixA"></div>
+                <span id="plus">X</span>
+                <div class="matrixB"></div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="multiplication.js"></script>
+
+</html>
