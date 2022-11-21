@@ -1,0 +1,77 @@
+html,body{
+    height: 100%;
+    width: 100%;
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+.container{
+    height: 100%;
+    width: 100%;
+    background-color: aqua;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* padding: 5%; */
+    /* margin: auto;*/
+
+}
+.sub-container{
+    height: 72vh;
+    width: 43vw;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    padding: 20px;
+    margin: auto;
+    min-width: 280px;
+    min-height: fit-content;
+    max-height: 375px;
+}
+.bulb{
+    height: 65vh;
+    width: 12.4vw;
+    max-height: 262px;
+    min-width: 168px;
+    background-color: antiquewhite;
+    /* margin: auto; */
+    /* padding: 10%; */
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin: auto;
+}
+button{
+    text-decoration: none;
+    background: none;
+    border: none;
+    height: 50px;
+    width: 50px;
+    border-radius: 50vh;
+    padding: 10px;
+    background-color: black;
+    border: 2px solid white;
+    -webkit-border-radius: 50vh;
+    -moz-border-radius: 50vh;
+    -ms-border-radius: 50vh;
+    -o-border-radius: 50vh;
+    color: white;
+    text-align: center;
+}
+button:hover{
+    background-color: white;
+    color: black;
+    border: 2px solid black;
+}
+.OFF{
+    background-image: url(OFF.png);
+}
+.ON{
+    background-image: url(ON.png);
+    max-height: 201px;
+    min-width: 182px;
+    
+}

@@ -1,0 +1,30 @@
+*{
+    margin: 0;padding: 0;
+}
+html,body{
+    height: 100%;
+    width: 100%;
+    background-color: black ;
+}
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.clockContainer{
+    background-color: white;
+    width: 60%;
+    height: 50%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.digits{
+    font-family: 'Roboto', sans-serif;
+    padding: 15px;
+    width: fit-content;
+    height: fit-content;
+    font-size: 9vw;
+}
