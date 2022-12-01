@@ -1,6 +1,12 @@
+import java.io.IOException;
 import java.util.Scanner;
 public class Handling{
-    public static void main(String[] args){
+    private static void divide(int x, int y)throws IOException{
+        throw new IOException("goodbye cruel world");
+    }
+    
+    public static void main(String[] args)throws IOException{
+    Handling.divide(10,0);
     Scanner ask  = new Scanner(System.in);
     String mystr;
     System.out.print("Enter a string");
