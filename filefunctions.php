@@ -1,6 +1,6 @@
 <?php  
 $file = fopen("test.txt","r");
-while($value=fscanf($file, "%s\t%s\t%s")){
+while($value=fscanf($file, "\t%s\t%s\t%s")){
     list($a,$b,$c)=$value;
     echo $a," ",$b," ",$c."\n";  // fscanf returns a parsed string according to defined format from a file of containing text
 }
