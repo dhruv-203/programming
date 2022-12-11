@@ -1,5 +1,5 @@
 public class WaitNotifyTest {
-    private static final long SLEEP_INTERVAL = 3000;
+    private static final long SLEEP_INTERVAL = 5000;
     private boolean running = true;
     private Thread thread;
     public void start() {
@@ -22,12 +22,13 @@ public class WaitNotifyTest {
        thread.start();
     }
     public void join() throws InterruptedException {
-       print("Inside join() method");
        synchronized(this) {
+          print("Inside join() method");
           while(running) {
             //  Thread.sleep(1000);
              print("Waiting for the peer thread to finish.");
              wait(); //waiting, not running
+             //wait(3000); waits only for three seconds and the runs the loop again then again wait for 3 secs but before that the sleep is executed
           }
           print("Peer thread finished.");
        }
