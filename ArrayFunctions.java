@@ -43,18 +43,27 @@ public class ArrayFunctions {
   }
 
   public static Integer pop(Integer[] arr, int index) {
-    if (getCount(arr) == 0) {
+    int count = getCount(arr);
+    if (count == 0) {
       return -1;
     } else {
-      ArrayList<Integer> temp = new ArrayList<Integer>();
+      // ArrayList<Integer> temp = new ArrayList<Integer>();
       Integer popItem = arr[index];
-      for (int i = 0; i < arr.length; i++) {
-        if (i != index) {
-          temp.add(arr[i]);
+      // for (int i = 0; i < arr.length; i++) {
+      //   if (i != index) {
+      //     temp.add(arr[i]);
+      //   }
+      // }
+      // arr = temp.toArray(arr);
+      // // System.out.println(arr.length);
+      // return popItem;
+      for(int i = index; i<count;i++){
+        if(i==(count-1)){
+          arr[i]=null;
+          continue;
         }
+        arr[i]= arr[i+1];
       }
-      arr = temp.toArray(arr);
-      // System.out.println(arr.length);
       return popItem;
     }
   }
@@ -106,6 +115,11 @@ public class ArrayFunctions {
     System.out.print("Enter the Size of Array: ");
     int size = ask.nextInt();
     Integer[] array = new Integer[size];
-    boolean check = true;
-  }
+    insert(array, 45);
+    insert(array, 54);
+    insert(array, 64);
+    insert(array, 97);
+    System.out.println(pop(array,1));
+    display(array);
+    }
 }
