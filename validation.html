@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form method="get">
+        <input type="text" name="fname" id="fname" placeholder="Enter Your First Name" required><br>
+        <input type="text" name="lname" id="lname" placeholder="Enter Your last Name" required><br>
+        <input type="email" name="mail" id="mail" placeholder="Enter your Email" required><br>
+        <input type="text" name="phone" id="phone" placeholder="Enter Your Mobile Number" required><br>
+        <textarea name="address" id="address" cols="30" rows="10" placeholder="Enter Your Address here"
+            required></textarea>
+        <input type="submit" value="Submit" onclick="validateIt()">
+    </form>
+</body>
+
+<script>
+    let fname = document.getElementById('fname');
+    let lname = document.getElementById('lname')
+    let mail = document.getElementById('mail');
+    let address = document.getElementById('address');
+    let phone = document.getElementById("phone");
+    let phoneRegex = /\b[96][0-9]{9}/g
+    function validateIt() {
+        if (fname.value.length > 30) {
+            alert("First Name Invalid")
+        }
+        if (lname.value.length > 30) {
+            alert("Last Name is invalid");
+        }
+        if (!mail.value.endsWith("@utu.ac.in")) {
+            alert("Email is invalid");
+        }
+        if (!phoneRegex.test(phone.value)) {
+            alert("Enter Valid Phone Number")
+        }
+        if (address.value.length > 60) {
+            alert("Address is too long")
+        }
+        
+        return false;
+    }
+</script>
+
+</html>
