@@ -43,11 +43,14 @@ class functions {
   int Top = -1;
   Integer size = null;
 
+  Integer[] S;
+  
   public functions(int size) {
     this.size = Integer.valueOf(size);
+    this.S = new Integer[this.size];
   }
 
-  Integer[] S = new Integer[this.size];
+  
 
   Boolean push(Integer value) {
     if (this.Top >= S.length) {
