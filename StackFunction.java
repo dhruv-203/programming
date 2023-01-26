@@ -71,7 +71,12 @@ class functions {
   }
 
   Integer peep(int index) {
-    return this.S[this.Top];
+    if((index-1)<=(this.Top)&&this.Top-(index-1)>-1){
+      return this.S[this.Top-(index-1)];
+    }
+    else{
+      return null;
+    }
   }
 
   Boolean Change(int index, Integer value) {
