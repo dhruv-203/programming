@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 import java.util.Scanner;
 
-public class Sparse {
+public class Practical2 {
 
   Scanner ask = new Scanner(System.in);
 
@@ -20,7 +20,7 @@ public class Sparse {
   void getSparseMatrix(int[][] matrix) {
     // getting non-zerors
     // size = 0;
-    Sparse obj = new Sparse();
+    Practical2 obj = new Practical2();
     ArrayList<Integer[]> indices = new ArrayList<Integer[]>();
     for (Integer i = 0; i < matrix.length; i++) {
       for (Integer j = 0; j < matrix[i].length; j++) {
@@ -58,7 +58,7 @@ public class Sparse {
   }
 
   public static void main(String[] args) {
-    Sparse obj = new Sparse();
+    Practical2 obj = new Practical2();
     int[][] matrix = obj.getNormalMatrix(3, 3);
     obj.displayNormalMatrix(matrix);
     obj.getSparseMatrix(matrix);

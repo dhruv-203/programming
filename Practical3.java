@@ -1,4 +1,4 @@
-public class StackFunction {
+public class Practical3 {
   public static void main(String[] args) {
     functions stack = new functions(10);
     stack.push(1);

@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class ArrayFunctions {
+public class Practical1 {
 
   public static int getCount(Integer[] arr) {
     int count = 0;
