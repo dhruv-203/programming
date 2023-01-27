@@ -49,13 +49,12 @@ obj.push(2)
 obj.push(1)
 obj.push(0)  # won't be pushed as stack is full
 obj.display()
-print(obj.pop())
-print(obj.pop())
-print(obj.peep(2))
+print("I am popped: ",obj.pop())
+print("i am popped: ",obj.pop())
+print("Second element from top: ",obj.peep(2))
 obj.push(2)
 obj.push(1)
 obj.change(3, 45)
 obj.display()
-
 mystack = obj.getStack()
 print(mystack);

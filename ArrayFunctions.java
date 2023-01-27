@@ -1,4 +1,3 @@
-import java.util.ArrayList;
 import java.util.Scanner;
 
 public class ArrayFunctions {
@@ -36,7 +35,7 @@ public class ArrayFunctions {
   public static void insert(Integer[] arr, int value) {
     int count = getCount(arr);
     if (count < arr.length) {
-      arr[count] = value; // yahan -1 nai kia becoz hume null value ko override krna hai
+      arr[count] = value;
     } else {
       System.out.println("ArrayOutOfBoundIndex");
     }
@@ -47,38 +46,18 @@ public class ArrayFunctions {
     if (count == 0) {
       return -1;
     } else {
-      // ArrayList<Integer> temp = new ArrayList<Integer>();
       Integer popItem = arr[index];
-      // for (int i = 0; i < arr.length; i++) {
-      //   if (i != index) {
-      //     temp.add(arr[i]);
-      //   }
-      // }
-      // arr = temp.toArray(arr);
-      // // System.out.println(arr.length);
-      // return popItem;
-      for(int i = index; i<count;i++){
-        if(i==(count-1)){
-          arr[i]=null;
+      for (int i = index; i < count; i++) {
+        if (i == (count - 1)) {
+          arr[i] = null;
           continue;
         }
-        arr[i]= arr[i+1];
+        arr[i] = arr[i + 1];
       }
       return popItem;
     }
   }
 
-  public static Integer pop(Integer[] arr) {
-    int count = getCount(arr);
-    // System.out.println(count);
-    if (count == 0) {
-      return -1;
-    } else {
-      return pop(arr, count - 1); // count-1 becoz pop krna hai existing elem ko
-    }
-  }
-
-  //update
   public static void update(Integer[] arr, int index, int value) {
     int count = getCount(arr);
     if (index >= arr.length) {
@@ -107,10 +86,10 @@ public class ArrayFunctions {
     for (Integer integer : array) {
       System.out.print(integer + " ");
     }
+    System.out.println("");
   }
 
   public static void main(String[] args) {
-    // taking dimension of array
     Scanner ask = new Scanner(System.in);
     System.out.print("Enter the Size of Array: ");
     int size = ask.nextInt();
@@ -119,7 +98,11 @@ public class ArrayFunctions {
     insert(array, 54);
     insert(array, 64);
     insert(array, 97);
-    System.out.println(pop(array,1));
     display(array);
-    }
+    System.out.println(search(array, 64));
+    System.out.println(pop(array, 0));
+    System.out.println(pop(array, 0));
+    System.out.println(pop(array, 0));
+    display(array);
+  }
 }

@@ -23,7 +23,7 @@ class Sparse:
         for i in range(0, m):
             temp = []
             for j in range(0, n):
-                temp.append(int(input(f"{i}th and {j}th Element")))
+                temp.append(int(input(f"{i}th and {j}th Element: ")))
             normalMatrix.append(temp)
         return normalMatrix
 
@@ -32,7 +32,7 @@ class Sparse:
             print("| ", end="")
             for j in range(0, len(normalMatrix[i])):
                 print(normalMatrix[i][j], end=" ")
-            print(" |")
+            print("|")
 
 
 obj = Sparse()
