@@ -36,12 +36,19 @@ class Stack:
             return False
 
     def display(self):
-        for i in self.stack:
-            print(i, end=" ")
+        if len(self.stack) == 0:
+            print("Underflow!!")
+            return;
+        for i in range(0, self.size):
+            if i < len(self.stack):
+                print(self.stack[i], end=" ")
+            else:
+                print("none", end=" ")
         print("")
 
 
-obj = Stack(5)
+size = int(input("Enter the size of the stack: "))
+obj = Stack(size)
 obj.push(5)
 obj.push(4)
 obj.push(3)
@@ -49,12 +56,13 @@ obj.push(2)
 obj.push(1)
 obj.push(0)  # won't be pushed as stack is full
 obj.display()
-print("I am popped: ",obj.pop())
-print("i am popped: ",obj.pop())
-print("Second element from top: ",obj.peep(2))
+print("I am popped: ", obj.pop())
+print("i am popped: ", obj.pop())
+obj.display()
+print("Second element from top: ", obj.peep(2))
 obj.push(2)
 obj.push(1)
 obj.change(3, 45)
 obj.display()
 mystack = obj.getStack()
-print(mystack);
+print(mystack)
