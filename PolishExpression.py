@@ -23,6 +23,7 @@ class Stack:
         "-": 1,
         "*": 3,
         "/": 3,
+        "%": 3,
         "^": 6,
         "(": 9,
         ")": 0
@@ -32,6 +33,7 @@ class Stack:
         "-": 2,
         "*": 4,
         "/": 4,
+        "%": 4,
         "^": 5,
         "(": 0,
     }
@@ -91,7 +93,7 @@ class Stack:
                 temp = self.__pop()
                 print("pop: ", temp)
                 self.revPolishString += temp
-                if temp in ['+', '-', '*', '/', '^']:
+                if temp in ['+', '-', '*', '/', '^', "%"]:
                     self.rank = self.rank-1
                 else:
                     self.rank = self.rank+1
@@ -113,7 +115,7 @@ class Stack:
             return self.revPolishString
 
 
-obj = Stack("(a+b^c^d)*(e+f/d)")
+obj = Stack("A-(B/C+(D%E*F)/G)*H")
 print(obj.getRevPol())
 print(obj.rank)
 #
